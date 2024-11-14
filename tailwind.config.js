@@ -7,7 +7,14 @@ module.exports = {
     './*.{html,js,md}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'featured-red': 'var(--featured-color-red)',
+        'featured-yellow': 'var(--featured-color-yellow)',
+        'featured-blue': 'var(--featured-color-blue)',
+        'base': 'var(--base-color)',
+      }
+    },
   },
   plugins: [],
 }
