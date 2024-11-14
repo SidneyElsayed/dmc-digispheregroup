@@ -446,6 +446,16 @@ video {
 .inset-0 {
   inset: 0px;
 }
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+.right-0 {
+  right: 0px;
+}
+.right-\[40vw\] {
+  right: 40vw;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -454,20 +464,15 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .block {
   display: block;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: flex;
@@ -487,14 +492,17 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
+.w-\[60vw\] {
+  width: 60vw;
+}
 .w-full {
   width: 100%;
 }
-.flex-auto {
-  flex: 1 1 auto;
+.w-\[50vw\] {
+  width: 50vw;
 }
-.flex-row {
-  flex-direction: row;
+.w-\[70vw\] {
+  width: 70vw;
 }
 .flex-col {
   flex-direction: column;
@@ -551,24 +559,30 @@ video {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.text-center {
-  text-align: center;
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.pr-4 {
+  padding-right: 1rem;
 }
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xl {
   font-size: 1.25rem;
@@ -577,8 +591,14 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
+.text-featured-blue {
+  color: var(--featured-color-blue);
+}
 .text-featured-red {
   color: var(--featured-color-red);
+}
+.underline-offset-1 {
+  text-underline-offset: 1px;
 }
 
 /* Custom CSS */
@@ -604,6 +624,40 @@ body {
 
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
+
+/* Reuseable Group Styles */
+.button {
+    font-family: "Righteous", sans-serif;
+    color: var(--featured-color-red);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    margin: 0rem 0.5rem;
+    border: 2px solid var(--featured-color-red);
+    border-bottom: 4px solid var(--featured-color-red);
+    border-right: 4px solid var(--featured-color-red);
+    transition: all 150ms;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: var(--featured-color-red);
+    color: var(--base-color);
+}
+
+@media (min-width: 640px) {
+  .sm\:relative {
+    position: relative;
+  }
+  .sm\:w-\[50vw\] {
+    width: 50vw;
+  }
+  .sm\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:block {
     display: block;

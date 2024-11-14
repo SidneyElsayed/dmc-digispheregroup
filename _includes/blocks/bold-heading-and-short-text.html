@@ -3,16 +3,13 @@
   
   <!-- Actual content starts here, so that the above has the max width -->
 
-  {% for item in block.button-loop %}
-
-  <div class="flex p-4 px-8 sm:px-16">
-    <a href="{{item.button-link}}" class="button">{{item.button-text}}</a>
+  <div class="p-8 sm:px-16 flex">
+    <h3 class="pr-4 featured-text text-5xl text-featured-blue pb-6 sm:w-[50vw]">{{block.heading}}</h3>
+    <p class="pl-4 flex-col relative sm:left-w-[50vw] sm:w-[50vw]">{{block.text}}</p>
   </div>
-
-  {% endfor %}
-
 
 
   <!-- Don't delete the below; these are for the starting id and class above -->
   </div>
 </section>
+

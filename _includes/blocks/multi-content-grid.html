@@ -6,18 +6,15 @@
 
       {% for col in block.columns %}
 
-
-    {% include /grid/{{col.type}}.html %}
+        {% include /grid/{{col.type}}.html %}
 
       {% endfor %}
     </div>
 
-
-
   </div>
 </section>
 
-
+<!-- Special inline style to put the column count liquid tag into the front matter -->
 <style>
 
   #section-{{forloop.index}} .grid{
