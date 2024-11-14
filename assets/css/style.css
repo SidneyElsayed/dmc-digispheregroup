@@ -490,6 +490,15 @@ video {
 .w-full {
   width: 100%;
 }
+.flex-auto {
+  flex: 1 1 auto;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
 .content-center {
   align-content: center;
 }
@@ -541,6 +550,9 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.text-center {
+  text-align: center;
 }
 .text-3xl {
   font-size: 1.875rem;

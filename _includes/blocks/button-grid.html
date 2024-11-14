@@ -1,0 +1,18 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+  
+  <!-- Actual content starts here, so that the above has the max width -->
+
+  {% for item in block.button-loop %}
+  
+  <div class="flex p-4 px-8 text-featured-red">
+    <a href="{{item.button-link}}" class="featured-text uppercase text-sm p-2 px-4 border-2 border-b-4 border-r-4 border-featured-red mx-2">{{item.button-text}}</a>
+  </div>
+
+  {% endfor %}
+
+
+
+  <!-- Don't delete the below; these are for the starting id and class above -->
+  </div>
+</section>
