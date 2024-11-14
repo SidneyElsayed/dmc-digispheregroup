@@ -1,0 +1,27 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+
+    <!-- Actual content starts here, so that the above has the max width -->
+    <div class="grid gap-8 min-h-screen">
+
+      {% for col in block.columns %}
+
+
+    {% include /grid/{{col.type}}.html %}
+
+      {% endfor %}
+    </div>
+
+
+
+  </div>
+</section>
+
+
+<style>
+
+  #section-{{forloop.index}} .grid{
+    grid-template-columns: repeat({{block.column-count}}, minmax(0, 1fr));
+  }
+  
+</style>

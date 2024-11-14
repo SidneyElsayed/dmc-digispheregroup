@@ -10,7 +10,19 @@
 </head>
 
 <body>
+
+    {% for block in page.blocks %}
+    <!-- {{block.id}} -->
+
+          
+    {% include /blocks/{{block.id}}.html link=link items=items %}
+    <!-- This passes the message on to the include that the information (link) is indeed a link and to use it -->
+    
+    {% endfor %}
+
     {{content}}
+
+
 </body>
 
 </html>

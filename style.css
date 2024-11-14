@@ -9,3 +9,17 @@
 @tailwind utilities;
 
 /* Custom CSS */
+
+.col-h-1{grid-row: span 1 / span 1;}
+.col-h-2{grid-row: span 2 / span 2;}
+.col-h-3{grid-row: span 3 / span 3;}
+.col-h-4{grid-row: span 4 / span 4;}
+.col-h-5{grid-row: span 5 / span 5;}
+.col-h-6{grid-row: span 6 / span 6;}
+
+.col-w-1{grid-column: span 1 / span 1;}
+.col-w-2{grid-column: span 2 / span 2;}
+.col-w-3{grid-column: span 3 / span 3;}
+.col-w-4{grid-column: span 4 / span 4;}
+.col-w-5{grid-column: span 5 / span 5;}
+.col-w-6{grid-column: span 6 / span 6;}
