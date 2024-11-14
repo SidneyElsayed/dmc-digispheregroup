@@ -454,6 +454,18 @@ video {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -477,6 +489,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.content-center {
+  align-content: center;
 }
 .justify-between {
   justify-content: space-between;
@@ -542,6 +557,10 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .uppercase {
   text-transform: uppercase;
