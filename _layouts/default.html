@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <title>{{page.title}}</title>
-</head>
+<!-- Head -->
+{% include site-head.html %}
+
+   <style>
+         :root {
+            --featured-color-red: {{site.data.style.featured-color-red}};
+            --featured-color-yellow: {{site.data.style.featured-color-yellow}};
+            --featured-color-blue: {{site.data.style.featured-color-blue}};
+            --base-color: {{site.data.style.base-color}};
+         }
+   </style>
 
 <body>
+    <!-- Header -->
+    {% include header.html %}
 
     {% for block in page.blocks %}
     <!-- {{block.id}} -->
@@ -17,10 +23,15 @@
           
     {% include /blocks/{{block.id}}.html link=link items=items %}
     <!-- This passes the message on to the include that the information (link) is indeed a link and to use it -->
+
     
     {% endfor %}
+    
+    <!-- Footer -->
+    {% include footer.html %}
+    
 
-    {{content}}
+
 
 
 </body>

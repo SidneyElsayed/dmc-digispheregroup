@@ -453,8 +453,14 @@ video {
 .block {
   display: block;
 }
+.flex {
+  display: flex;
+}
 .grid {
   display: grid;
+}
+.hidden {
+  display: none;
 }
 .h-full {
   height: 100%;
@@ -468,8 +474,14 @@ video {
 .w-full {
   width: 100%;
 }
-.gap-8 {
-  gap: 2rem;
+.flex-col {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .border {
   border-width: 1px;
@@ -485,16 +497,12 @@ video {
 .p-8 {
   padding: 2rem;
 }
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.p-4 {
+  padding: 1rem;
 }
-.font-bold {
-  font-weight: 700;
-}
-.text-green-900 {
-  --tw-text-opacity: 1;
-  color: rgb(20 83 45 / var(--tw-text-opacity));
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Custom CSS */
@@ -512,3 +520,16 @@ video {
 .col-w-4{grid-column: span 4 / span 4;}
 .col-w-5{grid-column: span 5 / span 5;}
 .col-w-6{grid-column: span 6 / span 6;}
+
+/* Typography */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.featured-text { font-family: "Righteous", sans-serif; }
+.accent-text { font-family: "Modak", serif;}
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+}
