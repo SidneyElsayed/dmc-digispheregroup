@@ -13,7 +13,7 @@ module.exports = {
         'featured-yellow': 'var(--featured-color-yellow)',
         'featured-green': 'var(--featured-color-green)',
         'featured-blue': 'var(--featured-color-blue)',
-        'base': 'var(--base-color)',
+        'base-color': 'var(--base-color)',
       }
     },
   },

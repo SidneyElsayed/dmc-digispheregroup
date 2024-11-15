@@ -32,6 +32,14 @@ body {
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
 
+.fun-text-shadow-rainbow {
+    text-shadow: 
+        var(--featured-color-red)/2 -5px 5px,
+        var(--featured-color-yellow) -10px 10px, 
+        var(--featured-color-green) -15px 15px, 
+        var(--featured-color-blue) -20px 20px
+}
+
 /* Reuseable Button Styles */
 .button {
     font-family: "Righteous", sans-serif;
@@ -80,3 +88,4 @@ body {
     background-color: var(--featured-color-blue);
     color: var(--base-color);
 }
+

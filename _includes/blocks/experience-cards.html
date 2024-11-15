@@ -17,7 +17,7 @@
     {% assign featured-experiences = site.experiences | sort: 'order' %}
 
     {% for item in featured-experiences | limit:3 %}
-
+    <a href="{{item.url}}">
       <!-- Card Loop -->
       <div class="{% if items.size > 3 %} basis-[30%] shrink-0 {% endif %} border-2 border-b-8 border-r-8 border-featured-red">
         <div class="">
@@ -46,6 +46,7 @@
 
         </div>
       </div>
+    </a>
     
     {% endfor %}
 

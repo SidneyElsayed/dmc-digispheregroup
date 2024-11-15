@@ -450,11 +450,11 @@ video {
   top: 0px;
   bottom: 0px;
 }
+.left-\[30vw\] {
+  left: 30vw;
+}
 .right-0 {
   right: 0px;
-}
-.right-\[40vw\] {
-  right: 40vw;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -512,9 +512,6 @@ video {
 }
 .w-\[50\%\] {
   width: 50%;
-}
-.w-\[60vw\] {
-  width: 60vw;
 }
 .w-\[70vw\] {
   width: 70vw;
@@ -587,9 +584,6 @@ video {
 .border-featured-red {
   border-color: var(--featured-color-red);
 }
-.bg-base {
-  background-color: var(--base-color);
-}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -617,6 +611,10 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -687,6 +685,13 @@ video {
   font-size: 3.75rem;
   line-height: 1;
 }
+.text-\[max\(14\.75vw\2c _5rem\)\] {
+  font-size: max(14.75vw, 5rem);
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -710,6 +715,9 @@ video {
 .lowercase {
   text-transform: lowercase;
 }
+.text-base-color {
+  color: var(--base-color);
+}
 .text-featured-blue {
   color: var(--featured-color-blue);
 }
@@ -722,11 +730,11 @@ video {
 .text-featured-yellow {
   color: var(--featured-color-yellow);
 }
+.underline {
+  text-decoration-line: underline;
+}
 .overline {
   text-decoration-line: overline;
-}
-.underline-offset-1 {
-  text-underline-offset: 1px;
 }
 
 /* Custom CSS */
@@ -752,6 +760,14 @@ body {
 
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
+
+.fun-text-shadow-rainbow {
+    text-shadow: 
+        var(--featured-color-red)/2 -5px 5px,
+        var(--featured-color-yellow) -10px 10px, 
+        var(--featured-color-green) -15px 15px, 
+        var(--featured-color-blue) -20px 20px
+}
 
 /* Reuseable Button Styles */
 .button {
@@ -836,3 +852,4 @@ body {
     padding-right: 4rem;
   }
 }
+

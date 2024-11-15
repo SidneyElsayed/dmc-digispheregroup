@@ -1,5 +1,6 @@
 ---
 layout: experience-layout
+order: 1
 heading: Desert Safari
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit
 star-count: 5
