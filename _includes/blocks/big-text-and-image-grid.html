@@ -7,11 +7,11 @@
   <!-- Text and Image Grid -->
   <!-- md:h-full on the div negates the h-72, h-full on the image is still needed because of the position absolute -->
   <div class="min-h-screen grid md:grid-cols-2">
-    <div class="grow relative order-first h-72 md:order-none md:h-full"> 
+    <div class="grow relative h-72 md:h-full"> 
       <img class="absolute w-full h-full object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}}  {{block.image-vertical-focal-point}}" src="{{block.image}}" alt="{{block.alt}}">
     </div>
     <!-- Text -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 self-end">
+    <div class="p-8 sm:p-16 col-span-1 pr-12 self-center {% if block.image-placement == 'right' %} md:order-first {% endif %}">
       <div>
         <p class="pb-4 text-md featured-text">{{block.overline}}</p>
         <h2 class="featured-text text-6xl">{{block.heading}}</h2>

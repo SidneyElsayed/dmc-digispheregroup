@@ -11,19 +11,31 @@
       <img class="absolute w-full h-full object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}}  {{block.image-vertical-focal-point}}" src="{{block.image}}" alt="{{block.alt}}">
     </div>
     <!-- Text -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 self-end {% if block.image-placement == 'right' %} md:order-first {% endif %}">
+    <div class="p-8 sm:p-16 col-span-1 pr-12 self-start {% if block.image-placement == 'right' %} md:order-first {% endif %}">
       <div>
         <h2 class="featured-text text-4xl">{{block.heading}}</h2>
-      </div>
+        <p class="uppercase pb-2 pt-6">{{block.age-range}} | {{block.category}}</p>
+        <p class="pb-4">{{block.text}}</p>
 
-      {% for item in block.info-loop %}
-      {% if item.overline and item.text %}
-      <div>
-        <h4 class="uppercase pb-2 pt-6">{{item.overline}}</h4>
-        <p class="">{{item.text}}</p>
+        {% for item in block.included-loop %}
+          {% if item.text %}
+          <p class="font-semibold">Included:</p>
+          <ol class="pb-2">
+            <li><span class="text-featured-green">✔ </span>{{item.text}}</li>
+          </ol>
+          {% endif %}
+        {% endfor %}
+
+        {% for item in block.not-included-loop %}
+          {% if item.text %}
+          <p class="font-semibold">Not included:</p>
+          <ol class="pb-2">
+            <li><span class="text-featured-red">✘ </span>{{item.text}}</li>
+          </ol>
+          {% endif %}
+        {% endfor %}
+
       </div>
-      {% endif %}
-      {% endfor %}
 
     </div>
   </div>
