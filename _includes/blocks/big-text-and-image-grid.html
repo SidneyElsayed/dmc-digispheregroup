@@ -6,24 +6,16 @@
 
   <!-- Text and Image Grid -->
   <!-- md:h-full on the div negates the h-72, h-full on the image is still needed because of the position absolute -->
-  <div class="grow relative order-first h-72 md:order-none md:h-full"> 
-    <img class="absolute w-full h-full object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}}  {{block.image-vertical-focal-point}}" src="{{block.image}}" alt="{{block.alt}}">
-  </div>
-  <div class="min-h-screen grid md:grid-cols-2 divide-x divide-featured">
+  <div class="min-h-screen grid md:grid-cols-2">
+    <div class="grow relative order-first h-72 md:order-none md:h-full"> 
+      <img class="absolute w-full h-full object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}}  {{block.image-vertical-focal-point}}" src="{{block.image}}" alt="{{block.alt}}">
+    </div>
     <!-- Text -->
     <div class="p-8 sm:p-16 col-span-1 pr-12 self-end">
       <div>
-        <h2 class="featured-text text-4xl">{{block.heading}}</h2>
+        <p class="pb-4 text-md featured-text">{{block.overline}}</p>
+        <h2 class="featured-text text-6xl">{{block.heading}}</h2>
       </div>
-
-      {% for item in block.info-loop %}
-      {% if item.overline and item.text %}
-      <div>
-        <h4 class="uppercase pb-2 pt-6">{{item.overline}}</h4>
-        <p class="">{{item.text}}</p>
-      </div>
-      {% endif %}
-      {% endfor %}
 
     </div>
   </div>
