@@ -1,0 +1,46 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+  
+<!-- Actual content starts here, so that the above has the max width -->
+
+<!-- Cards Section -->
+<div class="py-24 border-y border-featured">
+
+  {% if block.section-heading %}
+
+  <h2 class="px-8 sm:px-16 featured-text text-4xl">{{block.section-heading}}</h2>
+
+  {% endif %}
+
+  <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
+
+    {% for item in items %}
+
+      <!-- Card Loop -->
+      <div class="text-center {% if block.card-border == true %} border border-featured {% endif %} {% if items.size > 3 %} basis-[30%] shrink-0 {% endif %}">
+        <div class="{% if block.card-border == true %} p-4 {% endif %}">
+          <img class="aspect-square  border border-featured object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
+        </div>
+        <div class="p-4">
+          <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
+          <hr class="border-featured border-1 {% if block.card-border == true %} -mx-4 {% endif %}">
+          <p class="p-4 pt-6">{{item.text}}</p>
+
+          {% if item.button-link and item.button-text %}
+
+          <a href="{{item.button-link}}" class="button"> {{item.button-text}} </a>
+
+          {% endif %}
+
+        </div>
+      </div>
+    
+    {% endfor %}
+
+  </div>
+  
+</div>
+
+  <!-- Don't delete the below; these are for the starting id and class above -->
+</div>
+</section>
