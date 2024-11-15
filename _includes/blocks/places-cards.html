@@ -14,7 +14,7 @@
 
   <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
 
-    {% for item in site.experiences | limit:3 %}
+    {% for item in site.data.experiences | limit:3 %}
 
       <!-- Card Loop -->
       <div class="{% if items.size > 3 %} basis-[30%] shrink-0 {% endif %} border-2 border-b-8 border-r-8 border-featured-red">

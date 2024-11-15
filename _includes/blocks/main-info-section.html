@@ -1,0 +1,45 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+  
+  <!-- Actual content starts here, so that the above has the max width -->
+
+  <div>
+    <h2 class="featured-text text-4xl">{{item.heading}}</h2>
+    <p class="py-2 uppercase">{{item.duration}} | {{item.category}} | {{item.age-range}}</p>
+    <p class="pb-4">{{item.text}}</p>
+
+    <!-- List of included features -->
+    <div class="pb-2">
+      <p class="font-semibold pb-2">Included:</p>
+      {% for item in item.included-loop %}
+        {% if item.text %}
+        <ol class="pb-1">
+          <li><span class="text-featured-green">✔ </span>{{item.text}}</li>
+        </ol>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- List of not included features -->
+    <div class="pb-2">
+      <p class="font-semibold pb-2">Not included:</p>
+      {% for item in item.not-included-loop %}
+        {% if item.text %}
+        <ol class="pb-1">
+          <li><span class="text-featured-red">✘ </span>{{item.text}}</li>
+        </ol>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Price -->
+    <div class="text-3xl font-bold text-right">{{item.price}}</div>
+
+  </div>
+
+
+
+
+  <!-- Don't delete the below; these are for the starting id and class above -->
+  </div>
+</section>

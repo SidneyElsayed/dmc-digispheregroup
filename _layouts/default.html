@@ -23,7 +23,7 @@
 
     {% if block.type == 'experience' %}
       {% assign number = block.experience-number %}
-      {% assign item = site.data.experiences[number] %}
+      {% assign item = site.experiences[number] %}
          
          {% include /blocks/{{block.id}}.html item=item %}
 
