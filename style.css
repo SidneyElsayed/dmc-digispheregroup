@@ -32,12 +32,29 @@ body {
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
 
-.fun-text-shadow-rainbow {
+.fun-text-shadow-red {
     text-shadow: 
-        var(--featured-color-red)/2 -5px 5px,
-        var(--featured-color-yellow) -10px 10px, 
-        var(--featured-color-green) -15px 15px, 
-        var(--featured-color-blue) -20px 20px
+        #d16345 -5px 5px,
+        #d67459 -10px 10px, 
+        #db856e -15px 15px
+}
+
+.fun-text-shadow-blue {
+    text-shadow: 
+        #4a7285 5px 5px,
+        #538096 10px 10px, 
+        #5d8ea5 15px 15px
+}
+
+/* Shadow classes */
+
+.card-shadow {
+    box-shadow: var(--featured-color-red) 10px 10px;
+    transition: all;
+}
+
+.card-shadow:hover {
+    box-shadow: var(--featured-color-red) 15px 15px;
 }
 
 /* Reuseable Button Styles */

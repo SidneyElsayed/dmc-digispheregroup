@@ -4,26 +4,27 @@
 <!-- Actual content starts here, so that the above has the max width -->
 
 <!-- Cards Section -->
-<div class="py-20">
+<div class="py-20 bg-featured-yellow">
 
   {% if block.section-heading %}
 
-  <h2 class="px-8 sm:px-16 py-4 featured-text text-4xl">{{block.section-heading}}</h2>
+  <h2 class="px-8 sm:px-16 py-4 featured-text font-bold text-featured-red text-5xl">{{block.section-heading}}</h2>
 
   {% endif %}
 
-  <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
+  <div class="gap-8 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
 
     {% assign featured-experiences = site.experiences | sort: 'order' %}
 
     {% for item in featured-experiences | limit:3 %}
     <a href="{{item.url}}">
       <!-- Card Loop -->
-      <div class="{% if items.size > 3 %} basis-[30%] shrink-0 {% endif %} border-2 border-b-8 border-r-8 border-featured-red">
+      <div class="{% if items.size > 3 %} basis-[30%] shrink-0 {% endif %} card-shadow">
+        <!-- border-2 border-b-8 border-r-8 border-featured-red -->
         <div class="">
           <img class="aspect-[3/4] object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
         </div>
-        <div class="p-4">
+        <div class="p-4 bg-base-color">
           <h3 class="featured-text py-2 text-2xl">{{item.heading}}</h3>
           <p class="py-2 text-sm lowercase">{{item.duration}} | {{item.category}} | {{item.age-range}}</p>
 

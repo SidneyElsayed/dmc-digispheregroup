@@ -437,6 +437,34 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 .absolute {
   position: absolute;
 }
@@ -528,6 +556,9 @@ video {
 .basis-\[30\%\] {
   flex-basis: 30%;
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -536,6 +567,9 @@ video {
 }
 .items-center {
   align-items: center;
+}
+.justify-center {
+  justify-content: center;
 }
 .justify-between {
   justify-content: space-between;
@@ -548,6 +582,9 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .self-start {
   align-self: flex-start;
@@ -583,6 +620,15 @@ video {
 }
 .border-featured-red {
   border-color: var(--featured-color-red);
+}
+.bg-base-color {
+  background-color: var(--base-color);
+}
+.bg-featured-green {
+  background-color: var(--featured-color-green);
+}
+.bg-featured-yellow {
+  background-color: var(--featured-color-yellow);
 }
 .object-cover {
   -o-object-fit: cover;
@@ -631,6 +677,10 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -761,12 +811,29 @@ body {
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
 
-.fun-text-shadow-rainbow {
+.fun-text-shadow-red {
     text-shadow: 
-        var(--featured-color-red)/2 -5px 5px,
-        var(--featured-color-yellow) -10px 10px, 
-        var(--featured-color-green) -15px 15px, 
-        var(--featured-color-blue) -20px 20px
+        #d16345 -5px 5px,
+        #d67459 -10px 10px, 
+        #db856e -15px 15px
+}
+
+.fun-text-shadow-blue {
+    text-shadow: 
+        #4a7285 5px 5px,
+        #538096 10px 10px, 
+        #5d8ea5 15px 15px
+}
+
+/* Shadow classes */
+
+.card-shadow {
+    box-shadow: var(--featured-color-red) 10px 10px;
+    transition: all;
+}
+
+.card-shadow:hover {
+    box-shadow: var(--featured-color-red) 15px 15px;
 }
 
 /* Reuseable Button Styles */
@@ -837,6 +904,9 @@ body {
   }
   .md\:flex {
     display: flex;
+  }
+  .md\:grid {
+    display: grid;
   }
   .md\:h-full {
     height: 100%;
