@@ -456,6 +456,12 @@ video {
 .right-\[40vw\] {
   right: 40vw;
 }
+.order-first {
+  order: -9999;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -486,6 +492,9 @@ video {
 .h-full {
   height: 100%;
 }
+.h-72 {
+  height: 18rem;
+}
 .min-h-6 {
   min-height: 1.5rem;
 }
@@ -504,6 +513,9 @@ video {
 .w-\[70vw\] {
   width: 70vw;
 }
+.grow {
+  flex-grow: 1;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -516,11 +528,23 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
+.divide-x > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+}
+.self-end {
+  align-self: flex-end;
+}
 .border {
   border-width: 1px;
 }
 .border-2 {
   border-width: 2px;
+}
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
 .border-b-4 {
   border-bottom-width: 4px;
@@ -541,6 +565,10 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 .p-2 {
   padding: 0.5rem;
@@ -567,6 +595,27 @@ video {
 }
 .pr-4 {
   padding-right: 1rem;
+}
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
+}
+.pr-12 {
+  padding-right: 3rem;
+}
+.pt-6 {
+  padding-top: 1.5rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -596,6 +645,9 @@ video {
 }
 .text-featured-red {
   color: var(--featured-color-red);
+}
+.overline {
+  text-decoration-line: overline;
 }
 .underline-offset-1 {
   text-underline-offset: 1px;
@@ -652,6 +704,9 @@ body {
   .sm\:w-\[50vw\] {
     width: 50vw;
   }
+  .sm\:p-16 {
+    padding: 4rem;
+  }
   .sm\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -659,7 +714,16 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:order-none {
+    order: 0;
+  }
   .md\:block {
     display: block;
+  }
+  .md\:h-full {
+    height: 100%;
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
