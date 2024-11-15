@@ -1,12 +1,12 @@
 ---
 layout: experience-layout
-order: 4
-heading: Hot air balloon
+order: 3
+heading: Heritage Tour
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit
-star-count: 5
+star-count: 4
 age-range: all ages
-duration: 2 hours
-category: Adventure
+duration: 1 hour
+category: History
 short-text: Lorem ipsum dolor sit amet consectetur adipisicing elit
 text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam saepe dignissimos perferendis rerum porro natus aliquid eum, ut animi doloribus incidunt quasi sunt repudiandae id adipisci pariatur placeat iste.
 included-loop:
@@ -21,10 +21,10 @@ not-included-loop:
   - text: 
   - text: 
   - text: 
-price: $100
+price: $20
 button-text: 
 button-link: 
-image: https://images.unsplash.com/photo-1604413979494-eab8c4d3f68c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+image: https://images.unsplash.com/photo-1682686578456-69ae00b0ecbd?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 alt:
 image-placement: right
 image-horizontal-focal-point: right
