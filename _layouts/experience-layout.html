@@ -1,3 +1,43 @@
 ---
 layout: default
 ---
+<!-- Header -->
+<section class="flex relative items-center min-h-[60vh]">
+  <img class="absolute object-cover h-full w-full inset-y-0 right-0" src="{{page.image}}" alt="{{page.alt}}" style="object-position: {{page.image-horizontal-focal-point}}  {{page.image-vertical-focal-point}}">
+  <h1 class="relative text-6xl featured-text font-extrabold text-center w-full">{{page.heading}}</h1>
+</section>
+
+<!-- Main Info Section -->
+<section class="p-8 md:px-16">
+  <h2 class="featured-text text-4xl text-center">{{page.intro-title}}</h2>
+  <p class="py-4 uppercase text-center featured-text text-featured-red">{{page.duration}} | {{page.category}} | {{page.age-range}}</p>
+  <p class="pb-4">{{page.text}}</p>
+
+  <!-- List of included features -->
+  <div class="pb-2">
+    <p class="font-semibold pb-2">Included:</p>
+    {% for item in page.included-loop %}
+      {% if item.text %}
+      <ol class="pb-1">
+        <li><span class="text-featured-green">✔ </span>{{item.text}}</li>
+      </ol>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- List of not included features -->
+  <div class="pb-2">
+    <p class="font-semibold pb-2">Not included:</p>
+    {% for item in page.not-included-loop %}
+      {% if item.text %}
+      <ol class="pb-1">
+        <li><span class="text-featured-red">✘ </span>{{item.text}}</li>
+      </ol>
+      {% endif %}
+    {% endfor %}
+    
+  </div>
+  <!-- Price -->
+  <div class="text-3xl font-bold">{{page.price}}</div>
+
+</section>

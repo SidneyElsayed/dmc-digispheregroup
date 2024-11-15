@@ -32,14 +32,13 @@ body {
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
 
-/* Reuseable Group Styles */
+/* Reuseable Button Styles */
 .button {
     font-family: "Righteous", sans-serif;
     color: var(--featured-color-red);
     text-transform: uppercase;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
-    margin: 0rem 0.5rem;
     border: 2px solid var(--featured-color-red);
     border-bottom: 4px solid var(--featured-color-red);
     border-right: 4px solid var(--featured-color-red);
@@ -47,7 +46,37 @@ body {
     display: inline-block;
 }
 
+.button.text-featured-yellow {
+    color: var(--featured-color-yellow);
+    border-color: var(--featured-color-yellow);
+}
+
+.button.text-featured-green {
+    color: var(--featured-color-green);
+    border-color: var(--featured-color-green);
+}
+
+.button.text-featured-blue {
+    color: var(--featured-color-blue);
+    border-color: var(--featured-color-blue);
+}
+
 .button:hover {
     background-color: var(--featured-color-red);
+    color: var(--base-color);
+}
+
+.button.text-featured-yellow:hover {
+    background-color: var(--featured-color-yellow);
+    color: var(--base-color);
+}
+
+.button.text-featured-green:hover {
+    background-color: var(--featured-color-green);
+    color: var(--base-color);
+}
+
+.button.text-featured-blue:hover {
+    background-color: var(--featured-color-blue);
     color: var(--base-color);
 }

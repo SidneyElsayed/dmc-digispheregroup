@@ -1,6 +1,7 @@
 ---
 layout: experience-layout
 heading: Hot air balloon
+intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit
 star-count: 5
 age-range: all ages
 duration: 2 hours

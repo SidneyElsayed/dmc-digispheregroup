@@ -446,6 +446,13 @@ video {
 .inset-0 {
   inset: 0px;
 }
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+.right-0 {
+  right: 0px;
+}
 .right-\[40vw\] {
   right: 40vw;
 }
@@ -473,6 +480,9 @@ video {
 .flex {
   display: flex;
 }
+.inline-flex {
+  display: inline-flex;
+}
 .grid {
   display: grid;
 }
@@ -493,6 +503,9 @@ video {
 }
 .min-h-6 {
   min-height: 1.5rem;
+}
+.min-h-\[60vh\] {
+  min-height: 60vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -524,6 +537,9 @@ video {
 .content-center {
   align-content: center;
 }
+.items-center {
+  align-items: center;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -532,6 +548,9 @@ video {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .self-start {
   align-self: flex-start;
@@ -590,6 +609,10 @@ video {
 }
 .p-8 {
   padding: 2rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .px-8 {
   padding-left: 2rem;
@@ -675,6 +698,9 @@ video {
 .font-bold {
   font-weight: 700;
 }
+.font-extrabold {
+  font-weight: 800;
+}
 .font-semibold {
   font-weight: 600;
 }
@@ -727,14 +753,13 @@ body {
 .featured-text { font-family: "Righteous", sans-serif; }
 .accent-text { font-family: "Modak", serif;}
 
-/* Reuseable Group Styles */
+/* Reuseable Button Styles */
 .button {
     font-family: "Righteous", sans-serif;
     color: var(--featured-color-red);
     text-transform: uppercase;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
-    margin: 0rem 0.5rem;
     border: 2px solid var(--featured-color-red);
     border-bottom: 4px solid var(--featured-color-red);
     border-right: 4px solid var(--featured-color-red);
@@ -742,8 +767,38 @@ body {
     display: inline-block;
 }
 
+.button.text-featured-yellow {
+    color: var(--featured-color-yellow);
+    border-color: var(--featured-color-yellow);
+}
+
+.button.text-featured-green {
+    color: var(--featured-color-green);
+    border-color: var(--featured-color-green);
+}
+
+.button.text-featured-blue {
+    color: var(--featured-color-blue);
+    border-color: var(--featured-color-blue);
+}
+
 .button:hover {
     background-color: var(--featured-color-red);
+    color: var(--base-color);
+}
+
+.button.text-featured-yellow:hover {
+    background-color: var(--featured-color-yellow);
+    color: var(--base-color);
+}
+
+.button.text-featured-green:hover {
+    background-color: var(--featured-color-green);
+    color: var(--base-color);
+}
+
+.button.text-featured-blue:hover {
+    background-color: var(--featured-color-blue);
     color: var(--base-color);
 }
 
@@ -764,8 +819,8 @@ body {
   .md\:order-first {
     order: -9999;
   }
-  .md\:block {
-    display: block;
+  .md\:flex {
+    display: flex;
   }
   .md\:h-full {
     height: 100%;
@@ -775,5 +830,9 @@ body {
   }
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

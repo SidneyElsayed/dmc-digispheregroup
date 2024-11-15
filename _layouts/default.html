@@ -32,13 +32,10 @@
       {% include /blocks/{{block.id}}.html link=link item=item %}
       <!-- This passes the message on to the include that the information (link) is indeed a link and to use it -->
 
-    {% endif %}
-
-          
-   
-
-    
+       {% endif %}
     {% endfor %}
+
+    {{content}}
     
     <!-- Footer -->
     {% include footer.html %}
