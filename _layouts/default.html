@@ -21,8 +21,19 @@
     {% for block in page.blocks %}
     <!-- {{block.id}} -->
 
+    {% if block.type == 'experience' %}
+      {% assign number = block.experience-number %}
+      {% assign item = site.data.experiences[number] %}
+         
+         {% include /blocks/{{block.id}}.html item=item %}
+
+      {% else %}
+      {% assign item = block %}
+
+    {% endif %}
+
           
-    {% include /blocks/{{block.id}}.html link=link items=items %}
+    {% include /blocks/{{block.id}}.html link=link item=item %}
     <!-- This passes the message on to the include that the information (link) is indeed a link and to use it -->
 
     
