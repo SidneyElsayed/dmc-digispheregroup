@@ -437,34 +437,6 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
 .absolute {
   position: absolute;
 }
@@ -532,17 +504,14 @@ video {
 .min-h-6 {
   min-height: 1.5rem;
 }
+.min-h-80 {
+  min-height: 20rem;
+}
 .min-h-\[60vh\] {
   min-height: 60vh;
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.min-h-0\.5 {
-  min-height: 0.125rem;
-}
-.min-h-80 {
-  min-height: 20rem;
 }
 .w-\[50\%\] {
   width: 50%;
@@ -583,17 +552,14 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
+.gap-5 {
+  gap: 1.25rem;
+}
 .gap-6 {
   gap: 1.5rem;
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-4 {
-  gap: 1rem;
-}
-.gap-5 {
-  gap: 1.25rem;
 }
 .self-start {
   align-self: flex-start;
@@ -633,14 +599,14 @@ video {
 .bg-base-color {
   background-color: var(--base-color);
 }
+.bg-featured-blue {
+  background-color: var(--featured-color-blue);
+}
 .bg-featured-green {
   background-color: var(--featured-color-green);
 }
 .bg-featured-yellow {
   background-color: var(--featured-color-yellow);
-}
-.bg-featured-blue {
-  background-color: var(--featured-color-blue);
 }
 .object-cover {
   -o-object-fit: cover;
@@ -686,13 +652,13 @@ video {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -849,6 +815,23 @@ body {
 }
 
 /* Reuseable Button Styles */
+.button-shadow {
+    box-shadow: var(--featured-color-red) 3px 3px;
+    transition: all 150ms;
+    display: inline-block;
+    font-family: "Righteous", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--featured-color-red);
+}
+
+.button-shadow:hover {
+    background-color: var(--featured-color-red);
+    color: var(--base-color);
+    border: 3px 3px;
+}
+
 .button {
     font-family: "Righteous", sans-serif;
     color: var(--featured-color-red);
