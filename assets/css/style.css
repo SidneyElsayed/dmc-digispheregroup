@@ -538,6 +538,12 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-0\.5 {
+  min-height: 0.125rem;
+}
+.min-h-80 {
+  min-height: 20rem;
+}
 .w-\[50\%\] {
   width: 50%;
 }
@@ -586,6 +592,9 @@ video {
 .gap-4 {
   gap: 1rem;
 }
+.gap-5 {
+  gap: 1.25rem;
+}
 .self-start {
   align-self: flex-start;
 }
@@ -629,6 +638,9 @@ video {
 }
 .bg-featured-yellow {
   background-color: var(--featured-color-yellow);
+}
+.bg-featured-blue {
+  background-color: var(--featured-color-blue);
 }
 .object-cover {
   -o-object-fit: cover;
