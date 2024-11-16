@@ -51,8 +51,15 @@ layout: default
       <img class="absolute w-full h-full object-cover object-center" style="object-position: {{item.image-horizontal-focal-point}} {{item.image-vertical-focal-point}}" src="{{item..image}}" alt="{{item..alt}}">
     </div>
     <!-- Description -->
-    <div class="text-base-color grid grid-cols-3 m-10 content-center">
-      <div class="col-span-2">
+    <!-- This first if statement is what makes the first and last borders transparent -->
+    <div class="relative text-base-color grid grid-cols-3 content-center py-10 border-l-2 {% if forloop.index == 1 or forloop.index == page.timeline-loop.size %} border-l-transparent {% else %} border-base-color {% endif %}">
+      <!-- This if statement is setting the top half or bottom half border of the first and last containers -->
+      <span class="absolute -left-[2px] {% if forloop.index == page.timeline-loop.size %} bottom-1/2 top-0 {% else %} bottom-0 top-1/2 {% endif %} border-l-2 border-base-color "></span>
+      <div class="relative col-span-2 px-10"> 
+        <!-- This if statement is used to start the line at first conent and end at the last block (basically drawing blue over the white) -->
+        <span class="absolute -left-[2px] inset-y-0 border-l-2 {% if forloop.index == page.timeline-loop.size %} border-featured-blue {% else %} border-base-color {% endif %}"></span> 
+        <!-- THis span is for the dot -->
+        <span class="absolute -left-[7px] top-0 h-3 w-3 border-base-color bg-base-color rounded-full"></span>
         <p class="text-sm uppercase">{{item.time}}</p>
         <p class="text-xl font-semibold uppercase">{{item.name}}</p>
         <p class="">{{item.description}}</p>
