@@ -1,5 +1,6 @@
 ---
 layout: experience-layout
+title: Desert Safari
 order: 1
 heading: Desert Safari
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -31,4 +32,3 @@ image-horizontal-focal-point: right
 image-vertical-focal-point: center
 ---
 
-lorem jsndfglksj glskjfng slkdjfng slkdjfgn skldjfgn skldjfng sdlkjfgn skjn

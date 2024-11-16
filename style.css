@@ -77,16 +77,22 @@ body {
 .button.text-featured-yellow {
     color: var(--featured-color-yellow);
     border-color: var(--featured-color-yellow);
+    box-shadow:
+        var(--featured-color-yellow) 3px 3px;
 }
 
 .button.text-featured-green {
     color: var(--featured-color-green);
     border-color: var(--featured-color-green);
+    box-shadow:
+        var(--featured-color-green) 3px 3px;
 }
 
 .button.text-featured-blue {
     color: var(--featured-color-blue);
     border-color: var(--featured-color-blue);
+    box-shadow:
+        var(--featured-color-blue) 3px 3px;
 }
 
 .button:hover,
@@ -102,17 +108,35 @@ body {
 }
 
 .button.text-featured-yellow:hover {
+    box-shadow:
+    var(--featured-color-yellow) -3px 3px,
+    var(--featured-color-yellow) 3px -3px,
+    var(--featured-color-yellow) -3px -3px,
+    var(--featured-color-yellow) 3px 3px;
     background-color: var(--featured-color-yellow);
     color: var(--base-color);
+    border: 3px 3px;
 }
 
 .button.text-featured-green:hover {
+    box-shadow:
+    var(--featured-color-green) -3px 3px,
+    var(--featured-color-green) 3px -3px,
+    var(--featured-color-green) -3px -3px,
+    var(--featured-color-green) 3px 3px;
     background-color: var(--featured-color-green);
     color: var(--base-color);
+    border: 3px 3px;
 }
 
 .button.text-featured-blue:hover {
+    box-shadow:
+    var(--featured-color-blue) -3px 3px,
+    var(--featured-color-blue) 3px -3px,
+    var(--featured-color-blue) -3px -3px,
+    var(--featured-color-blue) 3px 3px;
     background-color: var(--featured-color-blue);
     color: var(--base-color);
+    border: 3px 3px;
 }
 

@@ -48,7 +48,7 @@ layout: default
   <div class="flex overflow-x-auto gap-4">
 
     {% for item in page.highlights-loop %}
-    <div class="relative flex items-end aspect-[3/4] basis-1/3 flex-shrink-0 group">
+    <div class="relative flex items-end aspect-[3/4] basis-5/6 md:basis-1/3 flex-shrink-0 group">
       <img class="absolute inset-0 object-cover w-full h-full" src="{{item.image}}" alt="{{item.alt}}">
       <div class="m-4 p-2 px-3 bg-base-color relative w-auto group-hover:w-4/5 transition-all transition-150ms">
         <p class="featured-text font-semibold">{{item.name}}</p>
@@ -95,3 +95,14 @@ layout: default
   {% endfor %}
 
 </section>
+
+<!-- More Info Links Banner -->
+<div class="p-8 sm:px-16 py-10 flex flex-col relative left-[30vw] w-[70vw]">
+  <h3 class="flex featured-text text-5xl text-featured-blue relative pb-6">Still have questions?</h3>
+
+  {% for item in page.link-loop %}
+    <p class=""><i class="fa-solid fa-caret-right text-lg"></i> {{item.text}} <a href="{{item.link}}" class=" text-featured-blue underline font-semibold"> {{item.link-text}} </a></p>
+    
+  {% endfor %}
+
+</div>
