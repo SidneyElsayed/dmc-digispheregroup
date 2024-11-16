@@ -437,6 +437,34 @@ video {
 [hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 .absolute {
   position: absolute;
 }
@@ -565,6 +593,9 @@ video {
 .h-3 {
   height: 0.75rem;
 }
+.max-h-0 {
+  max-height: 0px;
+}
 .min-h-6 {
   min-height: 1.5rem;
 }
@@ -610,6 +641,9 @@ video {
 }
 .max-w-\[50vw\] {
   max-width: 50vw;
+}
+.max-w-xl {
+  max-width: 36rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -680,6 +714,9 @@ video {
 .self-center {
   align-self: center;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -708,6 +745,9 @@ video {
 .border-l-\[50vh\] {
   border-left-width: 50vh;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -720,6 +760,10 @@ video {
 }
 .border-featured-blue {
   border-color: var(--featured-color-blue);
+}
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 .border-l-\[50\%\] {
   border-left-color: 50%;
@@ -769,6 +813,9 @@ video {
 .p-12 {
   padding: 3rem;
 }
+.p-6 {
+  padding: 1.5rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -817,6 +864,10 @@ video {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -846,6 +897,12 @@ video {
 }
 .pr-0 {
   padding-right: 0px;
+}
+.pt-0 {
+  padding-top: 0px;
+}
+.text-left {
+  text-align: left;
 }
 .text-center {
   text-align: center;
@@ -939,6 +996,9 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 /* Custom CSS */
