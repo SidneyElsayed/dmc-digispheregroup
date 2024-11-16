@@ -29,6 +29,23 @@ alt:
 image-placement: right
 image-horizontal-focal-point: right
 image-vertical-focal-point: center
+highlights-loop: 
+  - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    alt:
+    name: Astro-photography
+    text: lorem rerum porro natus aliquid eum, ut animi doloribus incidunt
+  - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    alt:
+    name: Star guide
+    text: lorem rerum porro natus aliquid eum, ut animi doloribus incidunt
+  - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    alt:
+    name: Another
+    text: lorem rerum porro natus aliquid eum, ut animi doloribus incidunt
+  - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    alt:
+    name: One more long title
+    text: lorem rerum porro natus aliquid eum, ut animi doloribus incidunt
 timeline-loop:
   - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     alt:
