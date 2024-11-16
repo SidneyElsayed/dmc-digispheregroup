@@ -1,0 +1,25 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+  
+<!-- Actual content starts here, so that the above has the max width -->
+
+{% if block.section-heading %}
+
+  <h2 class="px-8 sm:px-16 py-4 featured-text font-bold text-featured-red text-5xl">{{block.section-heading}}</h2>
+
+{% endif %}
+
+<div class="p-8 sm:p-16">
+  {% for item in block.accordion-loop %}
+  {% if item.question and item.answer %}
+  <div class="p-4 border-featured-blue border-2">
+    <h5 class="font-semibold text-lg">{{item.question}}</h5>
+    <p>{{item.answer}}</p>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+
+  <!-- Don't delete the below; these are for the starting id and class above -->
+  </div>
+</section>
