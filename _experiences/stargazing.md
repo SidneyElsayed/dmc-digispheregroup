@@ -44,14 +44,14 @@ timeline-loop:
     time: 9:30 am
     name: Depart for the starting point
     description: Whether in your own car or cars provided, the group will drive to the activity starting location.
-  - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  - image: 
     alt:
     image-horizontal-focal-point: center
     image-vertical-focal-point: center
     time: 10:30 am
     name: Start activity
     description: The group will begin the activity. THe time it takes to complete the activity will depend on each individual.
-  - image: https://images.unsplash.com/photo-1629667051607-e412f1c493c0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  - image: 
     alt:
     image-horizontal-focal-point: center
     image-vertical-focal-point: center

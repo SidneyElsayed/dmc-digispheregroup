@@ -42,27 +42,32 @@ layout: default
 
 </section>
 
-<section>
+<section class="py-12 bg-featured-blue">
   {% for item in page.timeline-loop %}
   <!-- Single activity block -->
-  <div class="bg-featured-blue min-h-[50vh] grid grid-cols-2">
+  <div class="grid grid-cols-2">
     <!-- Image -->
-    <div class="col-span-1 grow relative h-72 m-16"> 
+    {% if item.image %}
+    <div class="col-span-1 grow relative h-72 ml-0 m-8 md:m-12"> 
       <img class="absolute w-full h-full object-cover object-center" style="object-position: {{item.image-horizontal-focal-point}} {{item.image-vertical-focal-point}}" src="{{item..image}}" alt="{{item..alt}}">
     </div>
+    {% else %}
+    <div></div>
+    {% endif %}
+
     <!-- Description -->
     <!-- This first if statement is what makes the first and last borders transparent -->
-    <div class="relative text-base-color grid grid-cols-3 content-center py-10 border-l-2 {% if forloop.index == 1 or forloop.index == page.timeline-loop.size %} border-l-transparent {% else %} border-base-color {% endif %}">
+    <div class="relative text-base-color grid grid-cols-3 content-center py-4 border-l-2 {% if forloop.index == 1 or forloop.index == page.timeline-loop.size %} border-l-transparent {% else %} border-base-color {% endif %}">
       <!-- This if statement is setting the top half or bottom half border of the first and last containers -->
       <span class="absolute -left-[2px] {% if forloop.index == page.timeline-loop.size %} bottom-1/2 top-0 {% else %} bottom-0 top-1/2 {% endif %} border-l-2 border-base-color "></span>
-      <div class="relative col-span-2 px-10"> 
+      <div class="relative col-span-full lg:col-span-2 px-8 md:px-12"> 
         <!-- This if statement is used to start the line at first conent and end at the last block (basically drawing blue over the white) -->
         <span class="absolute -left-[2px] inset-y-0 border-l-2 {% if forloop.index == page.timeline-loop.size %} border-featured-blue {% else %} border-base-color {% endif %}"></span> 
         <!-- THis span is for the dot -->
         <span class="absolute -left-[7px] top-0 h-3 w-3 border-base-color bg-base-color rounded-full"></span>
         <p class="text-sm uppercase">{{item.time}}</p>
-        <p class="text-xl font-semibold uppercase">{{item.name}}</p>
-        <p class="">{{item.description}}</p>
+        <p class="text-base sm:text-xl font-semibold uppercase">{{item.name}}</p>
+        <p class="text-sm sm:text-base">{{item.description}}</p>
       </div>
     </div>
   </div>

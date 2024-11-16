@@ -489,11 +489,17 @@ video {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
+.col-span-full {
+  grid-column: 1 / -1;
+}
 .m-16 {
   margin: 4rem;
 }
 .m-10 {
   margin: 2.5rem;
+}
+.m-8 {
+  margin: 2rem;
 }
 .-mx-4 {
   margin-left: -1rem;
@@ -506,6 +512,9 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.ml-0 {
+  margin-left: 0px;
 }
 .block {
   display: block;
@@ -727,6 +736,9 @@ video {
 .p-10 {
   padding: 2.5rem;
 }
+.p-12 {
+  padding: 3rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -762,6 +774,14 @@ video {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -830,6 +850,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1006,11 +1030,28 @@ body {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 768px) {
   .md\:order-first {
     order: -9999;
+  }
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .md\:m-16 {
+    margin: 4rem;
+  }
+  .md\:m-12 {
+    margin: 3rem;
   }
   .md\:flex {
     display: flex;
@@ -1030,6 +1071,20 @@ body {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
 }
 
