@@ -41,3 +41,24 @@ layout: default
   <div class="text-3xl font-bold">{{page.price}}</div>
 
 </section>
+
+<section>
+  {% for item in page.timeline-loop %}
+  <!-- Single activity block -->
+  <div class="bg-featured-blue min-h-[50vh] grid grid-cols-2">
+    <!-- Image -->
+    <div class="col-span-1 grow relative h-72 m-16"> 
+      <img class="absolute w-full h-full object-cover object-center" style="object-position: {{item.image-horizontal-focal-point}} {{item.image-vertical-focal-point}}" src="{{item..image}}" alt="{{item..alt}}">
+    </div>
+    <!-- Description -->
+    <div class="text-base-color grid grid-cols-3 m-10 content-center">
+      <div class="col-span-2">
+        <p class="text-sm uppercase">{{item.time}}</p>
+        <p class="text-xl font-semibold uppercase">{{item.name}}</p>
+        <p class="">{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</section>
