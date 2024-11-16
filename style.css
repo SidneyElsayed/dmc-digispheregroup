@@ -58,34 +58,20 @@ body {
 }
 
 /* Reuseable Button Styles */
-.button-shadow {
-    box-shadow: var(--featured-color-red) 3px 3px;
-    transition: all 150ms;
-    display: inline-block;
-    font-family: "Righteous", sans-serif;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--featured-color-red);
-}
-
-.button-shadow:hover {
-    background-color: var(--featured-color-red);
-    color: var(--base-color);
-    border: 3px 3px;
-}
 
 .button {
     font-family: "Righteous", sans-serif;
     color: var(--featured-color-red);
     text-transform: uppercase;
+    box-shadow:
+        var(--featured-color-red) 3px 3px;
+    transition: all 150ms;
+    display: inline-block;
+    font-family: "Righteous", sans-serif;
+    text-transform: uppercase;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border: 2px solid var(--featured-color-red);
-    border-bottom: 4px solid var(--featured-color-red);
-    border-right: 4px solid var(--featured-color-red);
-    transition: all 150ms;
-    display: inline-block;
 }
 
 .button.text-featured-yellow {
@@ -103,9 +89,16 @@ body {
     border-color: var(--featured-color-blue);
 }
 
-.button:hover {
+.button:hover,
+.button.active {
+    box-shadow:
+    var(--featured-color-red) -3px 3px,
+    var(--featured-color-red) 3px -3px,
+    var(--featured-color-red) -3px -3px,
+    var(--featured-color-red) 3px 3px;
     background-color: var(--featured-color-red);
     color: var(--base-color);
+    border: 3px 3px;
 }
 
 .button.text-featured-yellow:hover {

@@ -15,7 +15,7 @@
     <div class="p-8 sm:p-16">
       <ul class="border-featured-blue border-2">
         {% for item in block.accordion-loop %} 
-        {% if item.question and item.answer%}
+        {% if item.question and item.answer %}
         <li class="relative border-b border-featured-blue" x-data="{selected:null}">
           <button
             type="button"
@@ -23,7 +23,8 @@
             @click="selected !== {{forloop.index}} ? selected = {{forloop.index}} : selected = null">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-lg">{{item.question}}</span>
-              <span class="ico-plus"></span>
+              <span x-bind:class="selected == {{forloop.index}} ? 'inline' : 'hidden' ">-</span>
+              <span x-bind:class="selected == {{forloop.index}} ? 'hidden' : 'inline' ">+</span>
             </div>
           </button>
 
