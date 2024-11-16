@@ -1,6 +1,9 @@
-<div class="col-h-{{col.height}} col-w-{{col.width}} border border-black min-h-6 p-8">
+<div class="col-h-{{col.height}} col-w-{{col.width}} min-h-6 p-8">
 
-  <h2 class="featured-text text-3xl">{{col.heading}}</h2>
-  <p>{{col.text}}</p>
-
-</div>
+  <h2 class="featured-text text-3xl pb-4">{{col.heading}}</h2>
+  {% if col.text-1 or col.text-2 or col.text-3  %}
+  <p class="py-2">{{col.text-1}}</p>
+  <p class="py-2">{{col.text-2}}</p>
+  <p class="py-2">{{col.text-3}}</p>
+  {% endif %}
+</div>  

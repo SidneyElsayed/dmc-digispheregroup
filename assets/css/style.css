@@ -695,6 +695,9 @@ video {
 .border-r-8 {
   border-right-width: 8px;
 }
+.border-none {
+  border-style: none;
+}
 .border-base-color {
   border-color: var(--base-color);
 }
