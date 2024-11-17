@@ -1,19 +1,26 @@
-<section id="section-{{forloop.index}}">
-  <div class="max-width mx-auto">
+<section id="section-{{forloop.index}}" class="relative">
+  <div class="max-width mx-auto bg-featured-blue text-base-color">
   
   <!-- Actual content starts here, so that the above has the max width -->
 
-  <div class="p-8 sm:px-16 py-10 flex flex-col relative left-[30vw] w-[70vw]">
-    <h3 class="flex featured-text text-5xl text-featured-blue relative pb-6">{{block.heading}}</h3>
+  <div class="p-8 sm:px-16 py-16 flex flex-col relative content-center md:left-[30vw] md:w-[70vw]">
+    <h3 class="flex featured-text text-5xl text-featured-yellow relative pb-6">{{block.heading}}</h3>
 
     {% for item in block.link-loop %}
-      <p class=""><i class="fa-solid fa-caret-right text-lg"></i> {{item.text}} <a href="{{item.link}}" class=" text-featured-blue underline font-semibold"> {{item.link-text}} </a></p>
+      <p class="text-base-color"><i class="fa-solid fa-caret-right text-lg"></i> {{item.text}} <a href="{{item.link}}" class=" text-featured-yellow underline font-semibold"> {{item.link-text}} </a></p>
       
     {% endfor %}
 
   </div>
 
-
+  <!-- This is the circle svg -->
+  <svg class="absolute hidden md:block -left-[12vw] -bottom-[5vw] -rotate-[355deg]" style="width:40vw" viewBox="0 0 2100 2100" fill="none">
+    <circle cx="900" cy="900" r="900" fill="#db856e"/>
+    <circle cx="1000" cy="1000" r="900" fill="#d67459"/>
+    <circle cx="1100" cy="1100" r="900" fill="#d16345"/>
+    <circle cx="1200" cy="1200" r="900" fill="var(--featured-color-red)"/>
+  </svg>
+    
   <!-- Don't delete the below; these are for the starting id and class above -->
   </div>
 </section>
