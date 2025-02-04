@@ -46,6 +46,20 @@ body {
         #5d8ea5 15px 15px
 }
 
+.fun-text-shadow-yellow {
+    text-shadow: 
+        #f5ba5b 5px 5px,
+        #f6c473 10px 10px, 
+        #f8ce8b 15px 15px
+}
+
+.fun-text-shadow-green {
+    text-shadow: 
+        #858d77 5px 5px,
+        #919985 10px 10px, 
+        #9ea593 15px 15px
+}
+
 /* Shadow classes */
 
 .card-shadow {
@@ -55,6 +69,42 @@ body {
 
 .card-shadow:hover {
     box-shadow: var(--featured-color-red) 15px 15px;
+}
+
+.card-shadow.bg-featured-red {
+    box-shadow: #d67459 10px 10px;
+    transition: all;
+}
+
+.card-shadow.bg-featured-red:hover {
+    box-shadow: #d67459 15px 15px;
+}
+
+.card-shadow.bg-featured-yellow {
+    box-shadow: #f6c473 10px 10px;
+    transition: all;
+}
+
+.card-shadow.bg-featured-yellow:hover {
+    box-shadow: #f6c473 15px 15px;
+}
+
+.card-shadow.bg-featured-green {
+    box-shadow: #919985 10px 10px;
+    transition: all;
+}
+
+.card-shadow.bg-featured-green:hover {
+    box-shadow: #919985 15px 15px;
+}
+
+.card-shadow.bg-featured-blue {
+    box-shadow: #538096 10px 10px;
+    transition: all;
+}
+
+.card-shadow.bg-featured-blue:hover {
+    box-shadow: #538096 15px 15px;
 }
 
 /* Reuseable Button Styles */

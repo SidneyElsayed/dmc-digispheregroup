@@ -1,0 +1,37 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+  
+  <!-- Actual content starts here, so that the above has the max width -->
+
+<div class="px-8 sm:px-16 py-32 grid">
+
+  {% if block.section-heading %}
+
+  <h2 class="pb-16 featured-text text-5xl sm:text-6xl">{{block.section-heading}}</h2>
+
+  {% endif %}
+
+  <div class="gap-10 grid sm:grid-cols-2 lg:grid-cols-4">
+
+    {% for item in block.card-loop: %}
+
+      <!-- Card Loop -->
+      <div class="text-base-color">
+        <div class="p-2 sm:p-4 {{item.bg-color}} card-shadow text-center">
+        <a href="{{item.link}}" class="">
+          <i class="p-4 sm:p-6 sm:-m-4 fa-solid {{item.icon}} text-4xl"></i>
+          <h3 class="p-3 sm:px-4 featured-text text-xl sm:text-2xl content-center">{{item.heading}}</h3>
+          <p class="">{{item.subheading}}</p>
+        </a>
+        </div>
+      </div>
+    
+    {% endfor %}
+
+  </div>
+  
+</div>
+
+    <!-- Don't delete the below; these are for the starting id and class above -->
+  </div>
+</section>
