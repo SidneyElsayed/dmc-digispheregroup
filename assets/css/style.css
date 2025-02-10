@@ -511,6 +511,21 @@ video {
 .top-1\/2 {
   top: 50%;
 }
+.-left-\[10vw\] {
+  left: -10vw;
+}
+.-left-\[15vw\] {
+  left: -15vw;
+}
+.-bottom-\[3vw\] {
+  bottom: -3vw;
+}
+.-bottom-\[7vw\] {
+  bottom: -7vw;
+}
+.-bottom-\[15vw\] {
+  bottom: -15vw;
+}
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -803,6 +818,10 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-28 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
