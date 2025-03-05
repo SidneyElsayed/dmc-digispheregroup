@@ -481,11 +481,11 @@ video {
   top: 0px;
   bottom: 0px;
 }
-.-bottom-\[5vw\] {
-  bottom: -5vw;
+.-bottom-\[15vw\] {
+  bottom: -15vw;
 }
-.-left-\[12vw\] {
-  left: -12vw;
+.-left-\[15vw\] {
+  left: -15vw;
 }
 .-left-\[2px\] {
   left: -2px;
@@ -510,21 +510,6 @@ video {
 }
 .top-1\/2 {
   top: 50%;
-}
-.-left-\[10vw\] {
-  left: -10vw;
-}
-.-left-\[15vw\] {
-  left: -15vw;
-}
-.-bottom-\[3vw\] {
-  bottom: -3vw;
-}
-.-bottom-\[7vw\] {
-  bottom: -7vw;
-}
-.-bottom-\[15vw\] {
-  bottom: -15vw;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -755,17 +740,14 @@ video {
 .p-2 {
   padding: 0.5rem;
 }
+.p-3 {
+  padding: 0.75rem;
+}
 .p-4 {
   padding: 1rem;
 }
 .p-8 {
   padding: 2rem;
-}
-.p-3 {
-  padding: 0.75rem;
-}
-.p-6 {
-  padding: 1.5rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -803,6 +785,10 @@ video {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+.py-28 {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -818,10 +804,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.py-28 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -1144,9 +1126,6 @@ body {
   .sm\:p-4 {
     padding: 1rem;
   }
-  .sm\:p-8 {
-    padding: 2rem;
-  }
   .sm\:p-6 {
     padding: 1.5rem;
   }
@@ -1164,10 +1143,6 @@ body {
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
   .sm\:text-6xl {
     font-size: 3.75rem;
@@ -1219,9 +1194,6 @@ body {
   }
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .md\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .md\:content-center {
     align-content: center;
