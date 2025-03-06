@@ -12,13 +12,13 @@ filters:
   <div class="flex md:justify-center overflow-x-scroll">
     
     <div class="inline-flex p-4 px-4 py-8 shrink-0">
-      <button class="button filterButton active" data-filter-value="all">all</button>
+      <button class="button filterButton active text-featured-red" data-filter-value="all">all</button>
     </div>
     
     {% for item in page.filters %}
     
     <div class="inline-flex p-4 px-4 py-8 shrink-0">
-      <button class="button filterButton" data-filter-value="{{item | replace: ' ','-' | downcase}}">{{item}}</button>
+      <button class="button text-featured-red filterButton" data-filter-value="{{item | replace: ' ','-' | downcase}}">{{item}}</button>
     </div>
     
     {% endfor %}
