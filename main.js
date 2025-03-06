@@ -1,3 +1,4 @@
+// Experiences
 const filterButton = document.querySelectorAll('.filterButton')
 const filterExperience = document.querySelectorAll('.filterExperience')
 
@@ -33,3 +34,42 @@ filterButton.forEach( button => {
 }
 
 )
+
+// Itineraries
+const filterButton = document.querySelectorAll('.filterButton')
+const filterItinerary = document.querySelectorAll('.filterItinerary')
+
+console.log(filterButton,filterItinerary)
+
+
+function filter() {
+  console.log(this.dataset.filterValue);
+
+  filterButton.forEach( button => {
+  button.classList.remove('active')
+  })
+
+  this.classList.add('active')
+
+  filterItinerary .forEach (itinerary => {
+    console.log(itinerary)
+
+    if (itinerary.classList.contains(this.dataset.filterValue))  {
+      itinerary.classList.remove('hidden')
+    } else {
+      itinerary.classList.add('hidden')
+    }
+
+  })
+  
+}
+
+
+filterButton.forEach( button => {
+  button.addEventListener('click', filter)
+  
+}
+
+)
+
+// 

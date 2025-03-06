@@ -1,0 +1,66 @@
+---
+layout: default
+title: Itineraries
+filters:
+  - 2-day
+  - 3-day
+  - 5-day
+---
+<section class="sticky top-0 bg-base-color">
+  <div class="max-width mx-auto">
+  
+  <div class="flex md:justify-center overflow-x-scroll">
+    
+    <div class="inline-flex p-4 px-4 py-8 shrink-0">
+      <button class="button filterButton active" data-filter-value="all">all</button>
+    </div>
+    
+    {% for item in page.filters %}
+    
+    <div class="inline-flex p-4 px-4 py-8 shrink-0">
+      <button class="button filterButton" data-filter-value="{{item | replace: ' ','-' | downcase}}">{{item}}</button>
+    </div>
+    
+    {% endfor %}
+    
+  </div>
+</section>
+  
+  <section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+  <!-- Actual content starts here, so that the above has the max width -->
+  
+
+<!-- Cards Section -->
+<div class="py-20 bg-featured-yellow">
+
+  <div class="gap-8 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
+
+    {% assign featured-itinerary = site.itineraries %}
+
+    {% for item in featured-itinerary  %}
+    <a href="{{item.url}}" class="all {{item.category | downcase | replace: ' ','-'}} filterItinerary">
+      <!-- Card Loop -->
+      <div class="card-shadow">
+        <!-- border-2 border-b-8 border-r-8 border-featured-red -->
+        <div class="">
+          <img class="aspect-[3/4] object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
+        </div>
+        <div class="p-4 bg-base-color">
+          <h3 class="featured-text py-2 text-2xl">{{item.heading}}</h3>
+          <p class="py-2 text-sm lowercase">{{item.category}}</p>
+          
+
+        </div>
+      </div>
+    </a>
+    
+    {% endfor %}
+
+  </div>
+  
+</div>
+
+  <!-- Don't delete the below; these are for the starting id and class above -->
+</div>
+</section>

@@ -33,6 +33,10 @@
     {% if block.type == 'experience' %}
       {% assign number = block.experience-number %}
       {% assign item = site.experiences[number] %}
+
+    {% elsif block.type == 'itinerary' %}
+      {% assign number = block.itinerary-number %}
+      {% assign item = site.itineraries[number] %}
          
          {% include /blocks/{{block.id}}.html item=item %}
 
