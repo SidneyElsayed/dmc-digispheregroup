@@ -60,6 +60,49 @@ body {
         #9ea593 15px 15px
 }
 
+/* Dropdown styles */
+
+.dropdown { 
+    position: relative; 
+    display: inline-block;
+  }
+  
+  .dropdown-title {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+
+  .dropdown-title:hover {
+    background-color: var(--featured-color-red);
+    color: var(--base-color);
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 80%;
+    left: -1rem;
+    padding: 0.5rem;
+    display:none; 
+    background-color: var(--base-color);
+    z-index: 3;
+    text-align: left;
+    min-width: 12rem;
+  }
+  
+  .dropdown:hover .dropdown-content{ 
+    display: block;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 0.2rem;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--featured-color-red);
+    color: var(--base-color);
+  }
+
 /* Shadow classes */
 
 .card-shadow {
@@ -240,4 +283,5 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
 
