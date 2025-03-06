@@ -72,4 +72,3 @@ filterButton.forEach( button => {
 
 )
 
-// 

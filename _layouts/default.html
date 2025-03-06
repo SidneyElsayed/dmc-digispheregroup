@@ -37,6 +37,10 @@
     {% elsif block.type == 'itinerary' %}
       {% assign number = block.itinerary-number %}
       {% assign item = site.itineraries[number] %}
+
+   {% elsif block.type == 'post' %}
+      {% assign number = block.post-number %}
+      {% assign item = site.post[number] %}
          
          {% include /blocks/{{block.id}}.html item=item %}
 

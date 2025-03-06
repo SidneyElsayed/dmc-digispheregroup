@@ -67,11 +67,11 @@ timeline-loop:
       time: 
       name: Yemeni Taste
       description: Sizzling small plates make up the menu of this local legend
-    - image: https://images.unsplash.com/photo-1504282706065-f5866e9cbeeb?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    - image: https://images.unsplash.com/photo-1710555331394-6f096f01f213?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGFiaXRhcyUyMEFsVWxhfGVufDB8fDB8fHww
       alt:
       image-horizontal-focal-point: center
       image-vertical-focal-point: center
-      time: Golden Hour
+      time: Golden Hour & Evening
       name: Arch Rock
       description: Drive out of town for one of the most epic off-the-beaten-path spots
   - title: Day 2

@@ -1,0 +1,331 @@
+---
+layout: default
+---
+<!-- Header -->
+  <div class="{% if page.screen-height == 'full' %} min-h-screen {% elsif page.screen-height == '80%' %} min-h-[80%] {% elsif page.screen-height == '60%' %} min-h-[60%] {% endif %}  grid md:grid-cols-2">
+    <!-- md:h-full on the div negates the h-72, h-full on the image is still needed because of the position absolute -->
+    <div class="grow relative h-72 md:h-full"> 
+      <img class="absolute w-full h-full object-cover object-center" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}" src="{{page.image}}" alt="{{page.alt}}">
+    </div>
+    <!-- Text -->
+    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.text-placement == 'top' %} self-start {% elsif page.text-placement == 'center' %} self-center {% elsif page.text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Heading -->
+      <div>
+        <h2 class="pb-8 featured-text text-6xl font-extrabold tracking-wide">{{page.heading}}</h2>
+      </div>
+
+      <!-- Paragraph text -->
+      {% for item in page.info-loop %}
+      {% if item.text %}
+      <div>
+        <p class="pb-4">{{item.text}}</p>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+      <!-- Buttons -->
+      <div class="pt-6">
+        {% if page.button-1-link and page.button-1-text %}
+        <a href="{{page.button-1-link}}" class="p-4 relative button button-1 {{page.button-1-bg}}">{{page.button-1-text}}</a>
+        {% endif %}
+
+        {% if page.button-2-link and page.button-2-text %}
+        <a href="{{page.button-2-link}}" class="p-4 relative button button-2 {{page.button-2-bg}}">{{page.button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+
+<!---------------------------- List item 1 ----------------------->
+  <!-- Section Heading -->
+  {% if page.list-1-section-heading %}
+
+  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-1-text-alignment == 'left' %} text-left {% elsif page.list-1-text-alignment == 'center' %} text-center {% elsif page.list-1-text-alignment == 'right' %} text-right {% endif %}">{{page.list-1-section-heading}}</h2>
+
+  {% endif %}
+
+  <!-- Image -->
+  <div class="grid grid-cols-2">
+    <div class="col-span-1"> 
+      <div class="relative m-16">
+        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-1-image-horizontal-focal-point}} {{page.list-1-image-vertical-focal-point}}" src="{{page.list-1-image}}" alt="{{page.list-1-alt | default: page.list-1-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-1-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
+      </div>
+    </div>
+
+    <!-- Text Block -->
+    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-1-text-placement == 'top' %} self-start {% elsif page.list-1-text-placement == 'center' %} self-center {% elsif page.list-1-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.list-1-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Text Block Heading -->
+      {% if page.list-1-text-block-heading %}
+      <div>
+        <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{page.list-1-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Description -->
+      {% if page.list-1-description-1 %}
+        <p class="pb-4">{{page.list-1-description-1}}</p>
+      {% endif %}
+
+      {% if page.list-1-description-2 %}
+        <p class="pb-4">{{page.list-1-description-2}}</p>
+      {% endif %}
+
+      {% if page.list-1-description-3 %}
+        <p class="pb-4">{{page.list-1-description-3}}</p>
+      {% endif %}
+
+      <!-- Buttons -->
+      <div class="pt-10">
+        {% if page.list-1-button-1-link and page.list-1-button-1-text %}
+        <a href="{{page.list-1-button-1-link}}" class="p-4 relative button button-1 {{page.list-1-button-1-bg}}">{{page.list-1-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.list-1-button-2-link and page.list-1-button-2-text %}
+        <a href="{{page.list-1-button-2-link}}" class="p-4 relative button button-2 {{page.list-1-button-2-bg}}">{{page.list-1-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+  <!---------------------------- List item 2 ----------------------->
+  <!-- Section Heading -->
+  {% if page.list-2-section-heading %}
+
+  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-2-text-alignment == 'left' %} text-left {% elsif page.list-2-text-alignment == 'center' %} text-center {% elsif page.list-2-text-alignment == 'right' %} text-right {% endif %}">{{page.list-2-section-heading}}</h2>
+
+  {% endif %}
+
+  <!-- Image -->
+  <div class="grid grid-cols-2">
+    <div class="col-span-1"> 
+      <div class="relative m-16">
+        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-2-image-horizontal-focal-point}} {{page.list-2-image-vertical-focal-point}}" src="{{page.list-2-image}}" alt="{{page.list-2-alt | default: page.list21-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-2-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
+      </div>
+    </div>
+
+    <!-- Text Block -->
+    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-2-text-placement == 'top' %} self-start {% elsif page.list-2-text-placement == 'center' %} self-center {% elsif page.list-2-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.list-2-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Text Block Heading -->
+      {% if page.list-2-text-block-heading %}
+      <div>
+        <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{page.list-2-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Description -->
+      {% if page.list-2-description-1 %}
+        <p class="pb-4">{{page.list-2-description-1}}</p>
+      {% endif %}
+
+      {% if page.list-2-description-2 %}
+        <p class="pb-4">{{page.list-2-description-2}}</p>
+      {% endif %}
+
+      {% if page.list-2-description-3 %}
+        <p class="pb-4">{{page.list-2-description-3}}</p>
+      {% endif %}
+
+      <!-- Buttons -->
+      <div class="pt-10">
+        {% if page.list-2-button-1-link and page.list-2-button-1-text %}
+        <a href="{{page.list-2-button-1-link}}" class="p-4 relative button button-1 {{page.list-2-button-1-bg}}">{{page.list-2-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.list-2-button-2-link and page.list-2-button-2-text %}
+        <a href="{{page.list-2-button-2-link}}" class="p-4 relative button button-2 {{page.list-2-button-2-bg}}">{{page.list-2-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+<!---------------------------- List item 3 ----------------------->
+  <!-- Section Heading -->
+  {% if page.list-3-section-heading %}
+
+  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-3-text-alignment == 'left' %} text-left {% elsif page.list-3-text-alignment == 'center' %} text-center {% elsif page.list-3-text-alignment == 'right' %} text-right {% endif %}">{{page.list-3-section-heading}}</h2>
+
+  {% endif %}
+
+  <!-- Image -->
+  <div class="grid grid-cols-2">
+    <div class="col-span-1"> 
+      <div class="relative m-16">
+        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-3-image-horizontal-focal-point}} {{page.list-3-image-vertical-focal-point}}" src="{{page.list-3-image}}" alt="{{page.list-3-alt | default: page.list-3-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-3-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
+      </div>
+    </div>
+
+    <!-- Text Block -->
+    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-3-text-placement == 'top' %} self-start {% elsif page.list-3-text-placement == 'center' %} self-center {% elsif page.list-3-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.list-3-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Text Block Heading -->
+      {% if page.list-3-text-block-heading %}
+      <div>
+        <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{page.list-3-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Description -->
+      {% if page.list-3-description-1 %}
+        <p class="pb-4">{{page.list-3-description-1}}</p>
+      {% endif %}
+
+      {% if page.list-3-description-2 %}
+        <p class="pb-4">{{page.list-3-description-2}}</p>
+      {% endif %}
+
+      {% if page.list-3-description-3 %}
+        <p class="pb-4">{{page.list-3-description-3}}</p>
+      {% endif %}
+
+      <!-- Buttons -->
+      <div class="pt-10">
+        {% if page.list-3-button-1-link and page.list-3-button-1-text %}
+        <a href="{{page.list-3-button-1-link}}" class="p-4 relative button button-1 {{page.list-3-button-1-bg}}">{{page.list-3-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.list-3-button-2-link and page.list-3-button-2-text %}
+        <a href="{{page.list-3-button-2-link}}" class="p-4 relative button button-2 {{page.list-3-button-2-bg}}">{{page.list-3-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+<!---------------------------- List item 4 ----------------------->
+  <!-- Section Heading -->
+  {% if page.list-4-section-heading %}
+
+  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-4-text-alignment == 'left' %} text-left {% elsif page.list-4-text-alignment == 'center' %} text-center {% elsif page.list-4-text-alignment == 'right' %} text-right {% endif %}">{{page.list-4-section-heading}}</h2>
+
+  {% endif %}
+
+  <!-- Image -->
+  <div class="grid grid-cols-2">
+    <div class="col-span-1"> 
+      <div class="relative m-16">
+        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-4-image-horizontal-focal-point}} {{page.list-4-image-vertical-focal-point}}" src="{{page.list-4-image}}" alt="{{page.list-4-alt | default: page.list-4-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-4-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
+      </div>
+    </div>
+
+    <!-- Text Block -->
+    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-4-text-placement == 'top' %} self-start {% elsif page.list-4-text-placement == 'center' %} self-center {% elsif page.list-4-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.list-4-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Text Block Heading -->
+      {% if page.list-4-text-block-heading %}
+      <div>
+        <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{page.list-4-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Description -->
+      {% if page.list-4-description-1 %}
+        <p class="pb-4">{{page.list-4-description-1}}</p>
+      {% endif %}
+
+      {% if page.list-4-description-2 %}
+        <p class="pb-4">{{page.list-4-description-2}}</p>
+      {% endif %}
+
+      {% if page.list-4-description-3 %}
+        <p class="pb-4">{{page.list-4-description-3}}</p>
+      {% endif %}
+
+      <!-- Buttons -->
+      <div class="pt-10">
+        {% if page.list-4-button-1-link and page.list-4-button-1-text %}
+        <a href="{{page.list-4-button-1-link}}" class="p-4 relative button button-1 {{page.list-4-button-1-bg}}">{{page.list-4-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.list-4-button-2-link and page.list-4-button-2-text %}
+        <a href="{{page.list-4-button-2-link}}" class="p-4 relative button button-2 {{page.list-4-button-2-bg}}">{{page.list-4-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+<!---------------------------- List item 5 ----------------------->
+  <!-- Section Heading -->
+  {% if page.list-5-section-heading %}
+
+  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-5-text-alignment == 'left' %} text-left {% elsif page.list-5-text-alignment == 'center' %} text-center {% elsif page.list-5-text-alignment == 'right' %} text-right {% endif %}">{{page.list-5-section-heading}}</h2>
+
+  {% endif %}
+
+  <!-- Image -->
+  <div class="grid grid-cols-2">
+    <div class="col-span-1"> 
+      <div class="relative m-16">
+        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-5-image-horizontal-focal-point}} {{page.list-5-image-vertical-focal-point}}" src="{{page.list-5-image}}" alt="{{page.list-5-alt | default: page.list-5-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-5-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
+      </div>
+    </div>
+
+    <!-- Text Block -->
+    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-5-text-placement == 'top' %} self-start {% elsif page.list-5-text-placement == 'center' %} self-center {% elsif page.list-5-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.list-5-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Text Block Heading -->
+      {% if page.list-5-text-block-heading %}
+      <div>
+        <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{page.list-5-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Description -->
+      {% if page.list-5-description-1 %}
+        <p class="pb-4">{{page.list-5-description-1}}</p>
+      {% endif %}
+
+      {% if page.list-5-description-2 %}
+        <p class="pb-4">{{page.list-5-description-2}}</p>
+      {% endif %}
+
+      {% if page.list-5-description-3 %}
+        <p class="pb-4">{{page.list-5-description-3}}</p>
+      {% endif %}
+
+      <!-- Buttons -->
+      <div class="pt-10">
+        {% if page.list-5-button-1-link and page.list-5-button-1-text %}
+        <a href="{{page.list-5-button-1-link}}" class="p-4 relative button button-1 {{page.list-5-button-1-bg}}">{{page.list-5-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.list-5-button-2-link and page.list-5-button-2-text %}
+        <a href="{{page.list-5-button-2-link}}" class="p-4 relative button button-2 {{page.list-5-button-2-bg}}">{{page.list-5-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
