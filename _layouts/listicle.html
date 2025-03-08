@@ -44,30 +44,42 @@ layout: default
   <!-- Section Heading -->
   {% if page.list-1-section-heading %}
 
-  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-1-text-alignment == 'left' %} text-left {% elsif page.list-1-text-alignment == 'center' %} text-center {% elsif page.list-1-text-alignment == 'right' %} text-right {% endif %}">{{page.list-1-section-heading}}</h2>
+  <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if page.list-1-section-heading-text-alignment == 'left' %} text-left {% elsif page.list-1-section-heading-text-alignment == 'center' %} text-center {% elsif page.list-1-section-heading-text-alignment == 'right' %} text-right {% endif %}">{{page.list-1-section-heading}}</h2>
 
   {% endif %}
 
   <!-- Image -->
   <div class="grid grid-cols-2">
-    <div class="col-span-1"> 
-      <div class="relative m-16">
-        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-1-image-horizontal-focal-point}} {{page.list-1-image-vertical-focal-point}}" src="{{page.list-1-image}}" alt="{{page.list-1-alt | default: page.list-1-subtitle}}">
-        <!-- Caption -->
-        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-1-subtitle}}</span>
-        <!-- Color block -->
-        <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
-      </div>
+    <div class="col-span-2 md:col-span-1 m-12 md:m-20 relative pb-[66%]"> 
+      <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{page.list-1-image-horizontal-focal-point}} {{page.list-1-image-vertical-focal-point}}" src="{{page.list-1-image}}" alt="{{page.list-1-alt | default: page.list-1-subtitle}}">
+      <!-- Caption -->
+      <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_145px)] lg:w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-1-subtitle}}</span>
+      <!-- Color block -->
+      <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
     </div>
 
     <!-- Text Block -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-1-text-placement == 'top' %} self-start {% elsif page.list-1-text-placement == 'center' %} self-center {% elsif page.list-1-text-placement == 'bottom' %} self-end {% endif %} 
+    <div class="p-8 sm:p-16 col-span-2 md:col-span-1 {% if page.list-1-text-placement == 'top' %} self-start {% elsif page.list-1-text-placement == 'center' %} self-center {% elsif page.list-1-text-placement == 'bottom' %} self-end {% endif %} 
     
     {% if page.list-1-image-placement == 'right' %} md:order-first {% endif %}">
       <!-- Text Block Heading -->
       {% if page.list-1-text-block-heading %}
-      <div>
-        <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{page.list-1-text-block-heading}}</h2>
+      <div class="">
+
+        <!-- List number block -->
+        <!-- This is the circle svg -->
+        <!-- <div class="relative">
+          <svg class="z-0 absolute -left-[16vw] -top-[7vw] -rotate-[355deg]" style="width:40vw" viewBox="0 0 2100 2100" fill="none">
+            <circle cx="900" cy="400" r="300" fill="#db856e"/>
+            <circle cx="950" cy="450" r="300" fill="#d67459"/>
+            <circle cx="1000" cy="500" r="300" fill="#d16345"/>
+            <circle cx="1050" cy="550" r="300" fill="var(--featured-color-red)"/>
+          </svg>
+          <p class="z-10 absolute px-10 featured-text text-base-color text-8xl text-center self-center">{{page.list-1-list-number}}</p>
+        </div> -->
+        
+    
+        <h2 class="z-20 pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide {% if page.list-1-block-heading-text-alignment == 'left' %} text-left {% elsif page.list-1-block-heading-text-alignment == 'center' %} text-center {% elsif page.list-1-block-heading-text-alignment == 'right' %} text-right {% endif %}">{{page.list-1-text-block-heading}}</h2>
       </div>
       {% endif %}
 
@@ -85,13 +97,13 @@ layout: default
       {% endif %}
 
       <!-- Buttons -->
-      <div class="pt-10">
+      <div class="pt-4">
         {% if page.list-1-button-1-link and page.list-1-button-1-text %}
-        <a href="{{page.list-1-button-1-link}}" class="p-4 relative button button-1 {{page.list-1-button-1-bg}}">{{page.list-1-button-1-text}}</a>
+        <a href="{{page.list-1-button-1-link}}" class="p-4 relative button button-1 {{page.list-1-button-1-bg}} text-featured-red">{{page.list-1-button-1-text}}</a>
         {% endif %}
 
         {% if page.list-1-button-2-link and page.list-1-button-2-text %}
-        <a href="{{page.list-1-button-2-link}}" class="p-4 relative button button-2 {{page.list-1-button-2-bg}}">{{page.list-1-button-2-text}}</a>
+        <a href="{{page.list-1-button-2-link}}" class="p-4 mx-4 relative button button-2 {{page.list-1-button-2-bg}} text-featured-blue">{{page.list-1-button-2-text}}</a>
         {% endif %}
       </div>
 
@@ -108,18 +120,16 @@ layout: default
 
   <!-- Image -->
   <div class="grid grid-cols-2">
-    <div class="col-span-1"> 
-      <div class="relative m-16">
-        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-2-image-horizontal-focal-point}} {{page.list-2-image-vertical-focal-point}}" src="{{page.list-2-image}}" alt="{{page.list-2-alt | default: page.list21-subtitle}}">
+    <div class="col-span-2 md:col-span-1 m-12 md:m-20 relative pb-[66%]"> 
+      <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{page.list-2-image-horizontal-focal-point}} {{page.list-2-image-vertical-focal-point}}" src="{{page.list-2-image}}" alt="{{page.list-2-alt | default: page.list21-subtitle}}">
         <!-- Caption -->
-        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-2-subtitle}}</span>
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_145px)] lg:w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-2-subtitle}}</span>
         <!-- Color block -->
         <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
-      </div>
     </div>
 
     <!-- Text Block -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-2-text-placement == 'top' %} self-start {% elsif page.list-2-text-placement == 'center' %} self-center {% elsif page.list-2-text-placement == 'bottom' %} self-end {% endif %} 
+    <div class="p-8 sm:p-16 col-span-2 md:col-span-1 {% if page.list-2-text-placement == 'top' %} self-start {% elsif page.list-2-text-placement == 'center' %} self-center {% elsif page.list-2-text-placement == 'bottom' %} self-end {% endif %} 
     
     {% if page.list-2-image-placement == 'right' %} md:order-first {% endif %}">
       <!-- Text Block Heading -->
@@ -143,13 +153,13 @@ layout: default
       {% endif %}
 
       <!-- Buttons -->
-      <div class="pt-10">
+      <div class="pt-4">
         {% if page.list-2-button-1-link and page.list-2-button-1-text %}
-        <a href="{{page.list-2-button-1-link}}" class="p-4 relative button button-1 {{page.list-2-button-1-bg}}">{{page.list-2-button-1-text}}</a>
+        <a href="{{page.list-2-button-1-link}}" class="p-4 relative button button-1 {{page.list-2-button-1-bg}} text-featured-red">{{page.list-2-button-1-text}}</a>
         {% endif %}
 
         {% if page.list-2-button-2-link and page.list-2-button-2-text %}
-        <a href="{{page.list-2-button-2-link}}" class="p-4 relative button button-2 {{page.list-2-button-2-bg}}">{{page.list-2-button-2-text}}</a>
+        <a href="{{page.list-2-button-2-link}}" class="p-4 mx-4 relative button button-2 {{page.list-2-button-2-bg}} text-featured-red">{{page.list-2-button-2-text}}</a>
         {% endif %}
       </div>
 
@@ -166,18 +176,16 @@ layout: default
 
   <!-- Image -->
   <div class="grid grid-cols-2">
-    <div class="col-span-1"> 
-      <div class="relative m-16">
-        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-3-image-horizontal-focal-point}} {{page.list-3-image-vertical-focal-point}}" src="{{page.list-3-image}}" alt="{{page.list-3-alt | default: page.list-3-subtitle}}">
+    <div class="col-span-2 md:col-span-1 m-12 md:m-20 relative pb-[66%]"> 
+      <img class="absolute inset-0 h-full w-full  z-10 object-cover object-center" style="object-position: {{page.list-3-image-horizontal-focal-point}} {{page.list-3-image-vertical-focal-point}}" src="{{page.list-3-image}}" alt="{{page.list-3-alt | default: page.list-3-subtitle}}">
         <!-- Caption -->
-        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-3-subtitle}}</span>
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_145px)] lg:w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-3-subtitle}}</span>
         <!-- Color block -->
         <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
-      </div>
     </div>
 
     <!-- Text Block -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-3-text-placement == 'top' %} self-start {% elsif page.list-3-text-placement == 'center' %} self-center {% elsif page.list-3-text-placement == 'bottom' %} self-end {% endif %} 
+    <div class="p-8 sm:p-16 col-span-2 md:col-span-1 {% if page.list-3-text-placement == 'top' %} self-start {% elsif page.list-3-text-placement == 'center' %} self-center {% elsif page.list-3-text-placement == 'bottom' %} self-end {% endif %} 
     
     {% if page.list-3-image-placement == 'right' %} md:order-first {% endif %}">
       <!-- Text Block Heading -->
@@ -201,13 +209,13 @@ layout: default
       {% endif %}
 
       <!-- Buttons -->
-      <div class="pt-10">
+      <div class="pt-4">
         {% if page.list-3-button-1-link and page.list-3-button-1-text %}
-        <a href="{{page.list-3-button-1-link}}" class="p-4 relative button button-1 {{page.list-3-button-1-bg}}">{{page.list-3-button-1-text}}</a>
+        <a href="{{page.list-3-button-1-link}}" class="p-4 relative button button-1 {{page.list-3-button-1-bg}} text-featured-red">{{page.list-3-button-1-text}}</a>
         {% endif %}
 
         {% if page.list-3-button-2-link and page.list-3-button-2-text %}
-        <a href="{{page.list-3-button-2-link}}" class="p-4 relative button button-2 {{page.list-3-button-2-bg}}">{{page.list-3-button-2-text}}</a>
+        <a href="{{page.list-3-button-2-link}}" class="p-4 mx-4 relative button button-2 {{page.list-3-button-2-bg}}">{{page.list-3-button-2-text}}</a>
         {% endif %}
       </div>
 
@@ -224,18 +232,16 @@ layout: default
 
   <!-- Image -->
   <div class="grid grid-cols-2">
-    <div class="col-span-1"> 
-      <div class="relative m-16">
-        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-4-image-horizontal-focal-point}} {{page.list-4-image-vertical-focal-point}}" src="{{page.list-4-image}}" alt="{{page.list-4-alt | default: page.list-4-subtitle}}">
+    <div class="col-span-2 md:col-span-1 m-12 md:m-20 relative pb-[66%]"> 
+      <img class="absolute inset-0 h-full w-full  z-10 object-cover object-center" style="object-position: {{page.list-4-image-horizontal-focal-point}} {{page.list-4-image-vertical-focal-point}}" src="{{page.list-4-image}}" alt="{{page.list-4-alt | default: page.list-4-subtitle}}">
         <!-- Caption -->
-        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-4-subtitle}}</span>
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_145px)] lg:w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-4-subtitle}}</span>
         <!-- Color block -->
         <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
-      </div>
     </div>
 
     <!-- Text Block -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-4-text-placement == 'top' %} self-start {% elsif page.list-4-text-placement == 'center' %} self-center {% elsif page.list-4-text-placement == 'bottom' %} self-end {% endif %} 
+    <div class="p-8 sm:p-16 col-span-2 md:col-span-1 {% if page.list-4-text-placement == 'top' %} self-start {% elsif page.list-4-text-placement == 'center' %} self-center {% elsif page.list-4-text-placement == 'bottom' %} self-end {% endif %} 
     
     {% if page.list-4-image-placement == 'right' %} md:order-first {% endif %}">
       <!-- Text Block Heading -->
@@ -259,13 +265,13 @@ layout: default
       {% endif %}
 
       <!-- Buttons -->
-      <div class="pt-10">
+      <div class="pt-4">
         {% if page.list-4-button-1-link and page.list-4-button-1-text %}
-        <a href="{{page.list-4-button-1-link}}" class="p-4 relative button button-1 {{page.list-4-button-1-bg}}">{{page.list-4-button-1-text}}</a>
+        <a href="{{page.list-4-button-1-link}}" class="p-4 relative button button-1 {{page.list-4-button-1-bg}} text-featured-red">{{page.list-4-button-1-text}}</a>
         {% endif %}
 
         {% if page.list-4-button-2-link and page.list-4-button-2-text %}
-        <a href="{{page.list-4-button-2-link}}" class="p-4 relative button button-2 {{page.list-4-button-2-bg}}">{{page.list-4-button-2-text}}</a>
+        <a href="{{page.list-4-button-2-link}}" class="p-4 mx-4 relative button button-2 {{page.list-4-button-2-bg}}">{{page.list-4-button-2-text}}</a>
         {% endif %}
       </div>
 
@@ -282,18 +288,16 @@ layout: default
 
   <!-- Image -->
   <div class="grid grid-cols-2">
-    <div class="col-span-1"> 
-      <div class="relative m-16">
-        <img class="relative z-10 object-cover object-center" style="object-position: {{page.list-5-image-horizontal-focal-point}} {{page.list-5-image-vertical-focal-point}}" src="{{page.list-5-image}}" alt="{{page.list-5-alt | default: page.list-5-subtitle}}">
+    <div class="col-span-2 md:col-span-1 m-12 md:m-20 relative pb-[66%]"> 
+      <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{page.list-5-image-horizontal-focal-point}} {{page.list-5-image-vertical-focal-point}}" src="{{page.list-5-image}}" alt="{{page.list-5-alt | default: page.list-5-subtitle}}">
         <!-- Caption -->
-        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-5-subtitle}}</span>
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_145px)] lg:w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.list-5-subtitle}}</span>
         <!-- Color block -->
         <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
-      </div>
     </div>
 
     <!-- Text Block -->
-    <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.list-5-text-placement == 'top' %} self-start {% elsif page.list-5-text-placement == 'center' %} self-center {% elsif page.list-5-text-placement == 'bottom' %} self-end {% endif %} 
+    <div class="p-8 sm:p-16 col-span-2 md:col-span-1 {% if page.list-5-text-placement == 'top' %} self-start {% elsif page.list-5-text-placement == 'center' %} self-center {% elsif page.list-5-text-placement == 'bottom' %} self-end {% endif %} 
     
     {% if page.list-5-image-placement == 'right' %} md:order-first {% endif %}">
       <!-- Text Block Heading -->
@@ -317,13 +321,13 @@ layout: default
       {% endif %}
 
       <!-- Buttons -->
-      <div class="pt-10">
+      <div class="pt-4">
         {% if page.list-5-button-1-link and page.list-5-button-1-text %}
-        <a href="{{page.list-5-button-1-link}}" class="p-4 relative button button-1 {{page.list-5-button-1-bg}}">{{page.list-5-button-1-text}}</a>
+        <a href="{{page.list-5-button-1-link}}" class="p-4 relative button button-1 {{page.list-5-button-1-bg}} text-featured-red">{{page.list-5-button-1-text}}</a>
         {% endif %}
 
         {% if page.list-5-button-2-link and page.list-5-button-2-text %}
-        <a href="{{page.list-5-button-2-link}}" class="p-4 relative button button-2 {{page.list-5-button-2-bg}}">{{page.list-5-button-2-text}}</a>
+        <a href="{{page.list-5-button-2-link}}" class="p-4 mx-4 relative button button-2 {{page.list-5-button-2-bg}}">{{page.list-5-button-2-text}}</a>
         {% endif %}
       </div>
 

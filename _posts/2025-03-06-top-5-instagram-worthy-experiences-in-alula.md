@@ -22,13 +22,15 @@ button-2-text:
 # LIST 1
 list-1-image: /images/adventure-alula-hot-air-balloons.jpg
 list-1-alt: Hot air balloons float over the UNESCO World Heritage Site of Hegra
-list-1-subtitle: Hot air balloons over Hegra
+list-1-subtitle: Hot air balloons over Hegra 
 list-1-image-placement: right
 list-1-image-horizontal-focal-point: center
 list-1-image-vertical-focal-point: center
-list-1-text-alignment: center
+list-1-section-heading-text-alignment: 
 list-1-section-heading: 
 list-1-text-placement: center
+list-1-block-heading-text-alignment: left
+list-1-list-number: 3
 list-1-text-block-heading: Hot air balloons
 list-1-description-1: Dreamy, magical, breathtaking – all the cliché words you can think of, but AlUla’s hot air balloon experience embodies them all. The bright colors of the balloons pop against the dramatic desert background.
 list-1-description-2: 

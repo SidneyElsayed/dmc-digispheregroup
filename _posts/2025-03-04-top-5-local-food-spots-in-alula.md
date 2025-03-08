@@ -33,8 +33,8 @@ list-1-text-block-heading: AlUla Heritage Restaurant & Kitchens
 list-1-description-1: Shaped like a castle, this unmistakable restaurant at the main roundabout into town has hands-down the best mandi in town. Order nafar laham for a taste of slow-cooked wild goat or a traditional half a chicken. Different sides of veggie options are available too – but go before 3pm if you want to try the goat.
 list-1-description-2: 
 list-1-description-3: 
-list-1-button-1-link: 
-list-1-button-1-text: 
+list-1-button-1-link: https://maps.app.goo.gl/tnL2bY3PWcCsVvA67 
+list-1-button-1-text: Directions
 list-1-button-2-link: 
 list-1-button-2-text: 
 
@@ -52,8 +52,8 @@ list-2-text-block-heading: Yemeni Taste
 list-2-description-1: Bubbling clay pots of rich, delicious lentils, meat and cheesy goodness are accompanied by swathes of crispy bread for dunking. This place is a certified greasy-spoon, but you’re meant to eat with your hands. No fuss, no muss, bring a group for sharing. Easily ranked the best spot for vegetarians. 
 list-2-description-2: 
 list-2-description-3: 
-list-2-button-1-link: 
-list-2-button-1-text: 
+list-2-button-1-link: https://maps.app.goo.gl/w6paKo2kcGMjpMiQ9
+list-2-button-1-text: Directions
 list-2-button-2-link: 
 list-2-button-2-text: 
 
@@ -67,12 +67,12 @@ list-3-image-vertical-focal-point: center
 list-3-text-alignment: center
 list-3-section-heading: 
 list-3-text-placement: center
-list-3-text-block-heading: Reef al-Reefi
+list-3-text-block-heading: Raghef AlReefi
 list-3-description-1: Best falafel and shawarma in town – and we’ve tried them all. Once the falafel is finished for the day, that’s it, so don’t wait for the craving to hit. Get the shawarma in their saj bread, or fettah shawarma if you want a plate with rice.
 list-3-description-2: 
 list-3-description-3: 
-list-3-button-1-link: 
-list-3-button-1-text: 
+list-3-button-1-link: https://maps.app.goo.gl/3LeFv6doYn5yNN8m8
+list-3-button-1-text: Directions
 list-3-button-2-link: 
 list-3-button-2-text: 
 
@@ -91,7 +91,7 @@ list-4-description-1: With a large Bengali population in AlUla, you’ve got to 
 list-4-description-2: 
 list-4-description-3: 
 list-4-button-1-link: 
-list-4-button-1-text: 
+list-4-button-1-text: Directions
 list-4-button-2-link: 
 list-4-button-2-text: 
 
@@ -109,8 +109,8 @@ list-5-text-block-heading: Tamees Bakery
 list-5-description-1: Not really a restaurant, these bakeries are hidden in plain sight. Look for a small window to order from, usually found next to a ‘breakfast buffet’ serving fuul and falafel. The easiest one to find is located directly across from Aramex.
 list-5-description-2: 
 list-5-description-3: 
-list-5-button-1-link: 
-list-5-button-1-text: 
+list-5-button-1-link: https://maps.app.goo.gl/hR8UVhtyFxhgL8rs5
+list-5-button-1-text: Directions
 list-5-button-2-link: 
 list-5-button-2-text: 
 ---
