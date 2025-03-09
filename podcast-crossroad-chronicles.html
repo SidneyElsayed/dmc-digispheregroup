@@ -1,0 +1,186 @@
+---
+layout: default
+title: Podcast | Crossroad Chronicles
+image: https://images.unsplash.com/photo-1595514346946-e268c9dc5316?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWx1bGF8ZW58MHx8MHx8fDA%3D
+alt:
+image-horizontal-focal-point: right
+image-vertical-focal-point: center
+
+featured-image: https://images.unsplash.com/photo-1603496987674-79600a000f55?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuZGl8ZW58MHx8MHx8fDA%3D
+featured-alt: 
+featured-subtitle: Shiv Gohil
+featured-image-placement: right
+featured-image-horizontal-focal-point: center
+featured-image-vertical-focal-point: center
+featured-section-heading: New on the pod
+featured-text-placement: center
+featured-text-block-guest-name: Shiv Gohil
+featured-text-block-heading: AlUla's official destination photographer
+featured-description-1: Shiv dives into behind-the-scenes stories of some of the most epic concerts at the world’s largest mirrored building, why he thinks sports are more emotional than weddings and how to find the best restaurants in AlUla. You’ll hear about Usher’s epic pre-concert photoshoot and stick around til the end where he gives some practical tips for visiting AlUla.
+featured-description-2: 
+featured-description-3: 
+featured-button-1-link: /index
+featured-button-1-text: Spotify
+featured-button-2-link: /index
+featured-button-2-text: Apple Podcasts
+
+about-image: >-
+  https://images.unsplash.com/photo-1604413979494-eab8c4d3f68c?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+about-alt:
+about-image-placement: left
+about-image-horizontal-focal-point: right
+about-image-vertical-focal-point: center
+about-overline: About the podcast
+about-description-1: Being on the ancient Incense Road has always been a huge part of what makes AlUla so special. 
+about-description-2: For generations, the locals who live here have been welcoming to traders and pilgrims, travelers have passed through and left their mark or even stayed and settled. It’s always been a crossroads of civilization, and that’s no different than today. 
+about-description-3: Crossroad Chronicles seeks to capture the stories of those whose roots run deep in AlUla, those who now call it home, or those who are simply passing through.
+
+host-image: /images/meet-sidney-adventure-alula.jpg
+host-alt: A picture of Sidney Tolo Elsayed in AlUla, smiling with the the sun just sinking behind mountains behind her.
+host-subtitle: Sidney Tolo Elsayed
+host-image-placement: right
+host-image-horizontal-focal-point: left
+host-image-vertical-focal-point: center
+host-section-heading: About the Host
+host-text-placement: center
+host-text-block-heading: Meet Sidney
+host-description-1: As the previous head writer and editor for experiencealula.com for 3 years, I know AlUla inside and out – but to me what makes it truly special is the people that I’ve met along the way. As I worked on the Experience AlUla website and app, I also became interested in development and learned to code. I had a dream to build something for the community and the place I feel lucky to call home, but it wasn’t until I had the idea to start a podcast that Adventure AlUla really came to life. 
+host-description-2: Since then, I’ve launched my own web development agency, Digisphere, and am pouring my heart and soul into breaking down misconceptions about Saudi, exploring the passions of people who live here, and uncovering the hidden gems that make AlUla truly unique.
+host-description-3: 
+host-button-1-link: https://midoandtolo.com/blog
+host-button-1-text: Check out her blog
+host-button-2-link: https://digispheregroup.com/
+host-button-2-text: Want your own website?
+---
+
+<!------- Header ------->
+<section class="flex flex-col grow relative justify-center min-h-[80vh]">
+
+  {% if page.image %}
+  <img class="absolute object-cover h-full w-full inset-y-0 right-0" src="{{page.image}}" alt="{{page.alt}}" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}">
+  {% endif %}
+</section>
+
+<!------- Featured Episode ------->
+<!-- Main heading -->
+<div class="py-16 md:py-24 bg-featured-blue text-base-color">
+  <h2 class="px-8 sm:px-16 featured-text font-extrabold uppercase tracking-wide text-center text-5xl sm:text-6xl">{{page.featured-section-heading}}</h2>
+
+
+  <div class="grid grid-cols-2 pt-12">
+    <!-- Featured Episode Image -->
+    <div class="col-span-2 md:col-span-1 relative m-16 pb-[33%]"> 
+        <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{page.featured-image-horizontal-focal-point}} {{page.featured-image-vertical-focal-point}}" src="{{page.featured-image}}" alt="{{page.featured-alt | default: page.featured-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.featured-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-14 h-full w-[100px] bg-[var(--text-color)] rounded-2xl"></span>
+    </div>
+
+    <!-- Featured Episode Text Block -->
+    <div class="px-8 sm:px-16 col-span-2 md:col-span-1 pr-8 {% if page.featured-text-placement == 'top' %} self-start {% elsif page.featured-text-placement == 'center' %} self-center {% elsif page.featured-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.featured-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Featured Episode Text Block Heading -->
+      {% if page.featured-text-block-heading %}
+      <div class="text-featured-yellow">
+        <h3 class="pb-4 text-5xl featured-text font-extrabold tracking-widest">{{page.featured-text-block-guest-name}}</h3>
+        <h2 class="pb-8 text-3xl font-extrabold">{{page.featured-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Featured Episode Description -->
+      {% if page.featured-description-1 %}
+        <p class="pb-4 block">{{page.featured-description-1}}</p>
+      {% endif %}
+      
+      <!-- Featured Episode Buttons -->
+      <div class="pt-4">
+        {% if page.featured-button-1-link and page.featured-button-1-text %}
+        <a href="{{page.featured-button-1-link}}" target="_blank" class="mr-4 p-4 relative button button-1 {{page.featured-button-1-bg}} bg-base-color text-featured-green">{{page.featured-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.featured-button-2-link and page.featured-button-2-text %}
+        <a href="{{page.featured-button-2-link}}" target="_blank" class="p-4 my-4 relative button button-2 {{page.featured-button-2-bg}} bg-base-color text-featured-red">{{page.featured-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!---- About the Podcast ------>
+<div class="min-h-screen grid md:grid-cols-2">
+  <div class="grow relative h-72 md:h-full"> 
+    <img class="absolute w-full h-full object-cover object-center" style="object-position: {{page.about-image-horizontal-focal-point}}  {{page.about-image-vertical-focal-point}}" src="{{page.about-image}}" alt="{{page.about-alt}}">
+  </div>
+  <!-- About the Podcast Text -->
+  <div class="p-8 sm:p-16 col-span-1 pr-12 self-center {% if page.about-image-placement == 'right' %} md:order-first {% endif %}">
+    <div>
+      {% if page.about-overline %}
+      <p class="w-[50%] pb-4 text-md featured-text uppercase">{{page.about-overline}}</p>
+      {% endif %}
+      <p class="pb-4 featured-text text-4xl">{{page.about-description-1}}</p>
+      <p class="pb-4 text-xl">{{page.about-description-2}}</p>
+      <p class="pb-4 text-xl">{{page.about-description-3}}</p>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<!---- About the Host ---->
+<!-- Host Main heading -->
+<div class="py-16 md:py-24 bg-featured-yellow">
+  <h2 class="px-8 sm:px-16 featured-text font-extrabold uppercase tracking-wide text-center text-5xl sm:text-6xl">{{page.host-section-heading}}</h2>
+
+
+  <div class="grid grid-cols-2 pt-12">
+    <!-- Host Image -->
+    <div class="col-span-2 md:col-span-1 relative m-16 pb-[33%]"> 
+        <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{page.host-image-horizontal-focal-point}} {{page.featured-image-vertical-focal-point}}" src="{{page.host-image}}" alt="{{page.host-alt | default: page.host-subtitle}}">
+        <!-- Caption -->
+        <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{page.host-subtitle}}</span>
+        <!-- Color block -->
+        <span class="z-0 absolute -right-[30px] -bottom-14 h-full w-[100px] bg-[var(--text-color)] rounded-2xl"></span>
+    </div>
+
+    <!-- Host Text Block -->
+    <div class="px-8 sm:px-16 col-span-2 md:col-span-1 pr-8 {% if page.host-text-placement == 'top' %} self-start {% elsif page.host-text-placement == 'center' %} self-center {% elsif page.host-text-placement == 'bottom' %} self-end {% endif %} 
+    
+    {% if page.host-image-placement == 'right' %} md:order-first {% endif %}">
+      <!-- Host Text Block Heading -->
+      {% if page.host-text-block-heading %}
+      <div>
+        <h2 class="pb-4 text-5xl featured-text font-extrabold tracking-widest">{{page.host-text-block-heading}}</h2>
+      </div>
+      {% endif %}
+
+      <!-- Host Description -->
+      {% if page.host-description-1 %}
+        <p class="pb-4 block">{{page.host-description-1}}</p>
+      {% endif %}
+      {% if page.host-description-2 %}
+        <p class="pb-4 block">{{page.host-description-2}}</p>
+      {% endif %}
+      {% if page.host-description-3 %}
+        <p class="pb-4 block">{{page.host-description-3}}</p>
+      {% endif %}
+      
+      <!-- Host Buttons -->
+      <div class="">
+        {% if page.host-button-1-link and page.host-button-1-text %}
+        <a href="{{page.host-button-1-link}}" target="_blank"  class="mr-4 p-4 relative button button-1 {{page.host-button-1-bg}} bg-base-color text-featured-blue">{{page.host-button-1-text}}</a>
+        {% endif %}
+
+        {% if page.host-button-2-link and page.host-button-2-text %}
+        <a href="{{page.host-button-2-link}}" target="_blank" class="p-4 my-4 relative button button-2 {{page.host-button-2-bg}} bg-base-color text-featured-green">{{page.host-button-2-text}}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</div>
