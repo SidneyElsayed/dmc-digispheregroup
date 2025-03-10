@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Podcast | Crossroad Chronicles
-image: https://images.unsplash.com/photo-1595514346946-e268c9dc5316?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWx1bGF8ZW58MHx8MHx8fDA%3D
+image: /images/cc-pod-page-header.jpg
+image-mob: /images/cc-pod-page-header-mob.jpg
 alt:
 image-horizontal-focal-point: right
 image-vertical-focal-point: center
@@ -35,7 +36,7 @@ about-description-1: Being on the ancient Incense Road has always been a huge pa
 about-description-2: For generations, the locals who live here have been welcoming to traders and pilgrims, travelers have passed through and left their mark or even stayed and settled. It’s always been a crossroads of civilization, and that’s no different than today. 
 about-description-3: Crossroad Chronicles seeks to capture the stories of those whose roots run deep in AlUla, those who now call it home, or those who are simply passing through.
 
-host-image: /images/meet-sidney-adventure-alula.jpg
+host-image: /images/meet-sidney.jpg
 host-alt: A picture of Sidney Tolo Elsayed in AlUla, smiling with the the sun just sinking behind mountains behind her.
 host-subtitle: Sidney Tolo Elsayed
 host-image-placement: right
@@ -54,20 +55,20 @@ host-button-2-text: Want your own website?
 ---
 
 <!------- Header ------->
-<section class="flex flex-col grow relative justify-center min-h-[80vh]">
-
-  {% if page.image %}
-  <img class="absolute object-cover h-full w-full inset-y-0 right-0" src="{{page.image}}" alt="{{page.alt}}" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}">
-  {% endif %}
+<section class="">
+  <img class="hidden sm:block object-cover h-full w-full inset-y-0 right-0" src="{{page.image}}" alt="{{page.alt}}" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}">
+  <img class="sm:hidden object-cover h-full w-full inset-y-0 right-0" src="{{page.image-mob}}" alt="{{page.alt}}" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}">
+  
 </section>
 
 <!------- Featured Episode ------->
 <!-- Main heading -->
+  <h2 class="px-8 sm:px-16 py-16 featured-text font-extrabold uppercase tracking-wide text-center text-5xl sm:text-6xl">{{page.featured-section-heading}}</h2>
+<div></div>
+
 <div class="py-16 md:py-24 bg-featured-blue text-base-color">
-  <h2 class="px-8 sm:px-16 featured-text font-extrabold uppercase tracking-wide text-center text-5xl sm:text-6xl">{{page.featured-section-heading}}</h2>
 
-
-  <div class="grid grid-cols-2 pt-12">
+  <div class="grid grid-cols-2">
     <!-- Featured Episode Image -->
     <div class="col-span-2 md:col-span-1 relative m-16 pb-[33%]"> 
         <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{page.featured-image-horizontal-focal-point}} {{page.featured-image-vertical-focal-point}}" src="{{page.featured-image}}" alt="{{page.featured-alt | default: page.featured-subtitle}}">

@@ -1358,6 +1358,12 @@ body {
   .sm\:-m-4 {
     margin: -1rem;
   }
+  .sm\:block {
+    display: block;
+  }
+  .sm\:hidden {
+    display: none;
+  }
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
