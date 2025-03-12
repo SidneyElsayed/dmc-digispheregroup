@@ -550,21 +550,15 @@ video {
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
-.col-span-full {
-  grid-column: 1 / -1;
-}
-<<<<<<< HEAD
-.col-span-9 {
-  grid-column: span 9 / span 9;
-}
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
 .col-span-8 {
   grid-column: span 8 / span 8;
 }
-=======
->>>>>>> parent of b4e5a48 (travel blog and articles page created)
+.col-span-full {
+  grid-column: 1 / -1;
+}
 .m-12 {
   margin: 3rem;
 }
@@ -648,9 +642,6 @@ video {
 .min-h-6 {
   min-height: 1.5rem;
 }
-.min-h-80 {
-  min-height: 20rem;
-}
 .min-h-\[60\%\] {
   min-height: 60%;
 }
@@ -718,18 +709,9 @@ video {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-<<<<<<< HEAD
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
 .grid-cols-8 {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-=======
->>>>>>> parent of b4e5a48 (travel blog and articles page created)
 .flex-col {
   flex-direction: column;
 }
@@ -908,10 +890,6 @@ video {
 .py-28 {
   padding-top: 7rem;
   padding-bottom: 7rem;
-}
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -1469,9 +1447,6 @@ body {
   }
   .md\:flex {
     display: flex;
-  }
-  .md\:grid {
-    display: grid;
   }
   .md\:hidden {
     display: none;
