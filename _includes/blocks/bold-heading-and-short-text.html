@@ -3,12 +3,12 @@
   
   <!-- Actual content starts here, so that the above has the max width -->
 
-  <div class="grid grid-cols-2 gap-12 px-8 sm:px-16 py-24 bg-featured-blue text-base-color">
+  <div class="grid grid-cols-8 gap-12 px-8 sm:px-16 py-24 bg-featured-blue text-base-color">
     <!-- Large Text -->
-    <h3 class="featured-text text-5xl font-extrabold tracking-wide {% if block.large-text-width == 'full' %} col-span-2 {% elsif block.large-text-width == 'half' %} col-span-2 md:col-span-1 {% endif %}">{{block.heading}}</h3>
+    <h3 class="featured-text text-5xl font-extrabold tracking-wide {% if block.large-text-width == 'full' %} col-span-4 {% elsif block.large-text-width == 'two-thirds' %} col-span-8 md:col-span-6 {% elsif block.large-text-width == 'half' %} col-span-8 md:col-span-4 {% endif %}">{{block.heading}}</h3>
 
     <!-- Paragraphs -->
-    <div class="{% if block.paragraph-width == 'full' %} col-span-2 {% elsif block.paragraph-width == 'half' %} col-span-2 md:col-span-1 {% endif %} {% if block.large-text-placement == 'right' %} md:order-first {% endif %}">
+    <div class="{% if block.paragraph-width == 'full' %} col-span-8 {% elsif block.paragraph-width == 'half' %} col-span-8 md:col-span-4 {% endif %} {% if block.large-text-placement == 'right' %} md:order-first {% endif %}">
       {% if block.text-1 %}
         <p class="pb-4">{{block.text-1}}</p>
       {% endif %}
