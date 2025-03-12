@@ -1,6 +1,6 @@
 ---
 layout: experience-layout
-title: Desert Safari
+title: Desert Safari | Adventure AlUla
 order: 1
 heading: Desert Safari
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit

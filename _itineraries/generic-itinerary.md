@@ -1,6 +1,6 @@
 ---
 layout: itinerary-layout
-title: 2-Day Itinerary
+title: 2-Day Itinerary | Adventure AlUla
 order: 1
 category: 2-day
 heading: 2-Day Itinerary

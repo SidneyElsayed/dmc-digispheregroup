@@ -1,6 +1,6 @@
 ---
 layout: experience-layout
-title: Heritage Tour
+title: Heritage Tour | Adventure AlUla
 order: 3
 heading: Heritage Tour
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit

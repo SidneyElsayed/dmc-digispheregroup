@@ -1,6 +1,6 @@
 ---
 layout: experience-layout
-title: Helicopter Tour
+title: Helicopter Tour | Adventure AlUla
 order: 4
 heading: Helicopter Tour
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit

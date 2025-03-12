@@ -1,6 +1,6 @@
 ---
 layout: itinerary-layout
-title: Photographer's Itinerary
+title: Photographer's Itinerary | Adventure AlUla
 order: 1
 category: 2-day
 heading: Photographer's Itinerary

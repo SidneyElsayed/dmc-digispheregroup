@@ -1,6 +1,6 @@
 ---
 layout: experience-layout
-title: Stargazing
+title: Stargazing | Adventure AlUla
 order: 2
 heading: Stargazing
 intro-title: Lorem ipsum dolor sit amet consectetur adipisicing elit

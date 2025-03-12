@@ -1,6 +1,6 @@
 ---
 layout: listicle
-title: Top 5 Local Food Spots in AlUla
+title: Top 5 Local Food Spots in AlUla | Adventure AlUla
 image: >-
   https://images.unsplash.com/photo-1603496987674-79600a000f55?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuZGl8ZW58MHx8MHx8fDA%3D
 alt:

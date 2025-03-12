@@ -1,6 +1,6 @@
 ---
 layout: listicle
-title: Top 5 Must-Do Local Experiences in AlUla
+title: Top 5 Must-Do Local Experiences in AlUla | Adventure AlUla
 image: >-
   https://images.unsplash.com/photo-1621526127806-6080a5a41129?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGR1bmUlMjBidWdnaWVzfGVufDB8fDB8fHww
 alt:
