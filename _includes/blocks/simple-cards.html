@@ -4,7 +4,7 @@
 <!-- Actual content starts here, so that the above has the max width -->
 
 <!-- Cards Section -->
-<div class="py-24 border-y border-featured">
+<div class="py-24 bg-featured-yellow">
 
   {% if block.section-heading %}
 
@@ -14,25 +14,24 @@
 
   <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
 
-    {% for item in items %}
+    {% for item in block.card-loop %}
 
       <!-- Card Loop -->
-      <div class="text-center {% if block.card-border == true %} border border-featured {% endif %} {% if items.size > 3 %} basis-[30%] shrink-0 {% endif %}">
-        <div class="{% if block.card-border == true %} p-4 {% endif %}">
-          <img class="aspect-square  border border-featured object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
-        </div>
-        <div class="p-4">
-          <h3 class="featured-text py-4 text-2xl">{{item.heading}}</h3>
-          <hr class="border-featured border-1 {% if block.card-border == true %} -mx-4 {% endif %}">
-          <p class="p-4 pt-6">{{item.text}}</p>
+      <div class="{% if items.size > 3 %} basis-[30%] shrink-0 {% endif %} card-shadow bg-base-color">
+        <a href="{{item.url}}">
+          <div class="">
+            <img class="aspect-square object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
+          </div>
+          <div class="p-2">
+            <h3 class="featured-text p-2 pb-0 text-2xl">{{item.heading}}</h3>
+            <p class="p-2">
+              {% if item.ticket-needed == true %} <i class="fa-solid fa-ticket"></i> ticket needed |{% endif %} 
+              {% if item.pets-allowed == true %} <i class="fa-solid fa-paw"></i> allowed |{% endif %} 
+              {% if item.accessible == true %} <i class="fa-brands fa-accessible-icon"></i> accessible |{% endif %}
+              {% if item.family-friendly == true %} <i class="fa-solid fa-person-breastfeeding"></i> family-friendly{% endif %} </p>
 
-          {% if item.button-link and item.button-text %}
-
-          <a href="{{item.button-link}}" class="button"> {{item.button-text}} </a>
-
-          {% endif %}
-
-        </div>
+          </div>
+        </a>
       </div>
     
     {% endfor %}
