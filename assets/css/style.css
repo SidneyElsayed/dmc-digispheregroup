@@ -1453,6 +1453,9 @@ body {
   .sm\:pb-24 {
     padding-bottom: 6rem;
   }
+  .sm\:pl-16 {
+    padding-left: 4rem;
+  }
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1550,6 +1553,9 @@ body {
   }
   .md\:pr-0 {
     padding-right: 0px;
+  }
+  .md\/\:pt-8 {
+    padding-top: 2rem;
   }
 }
 @media (min-width: 1024px) {
