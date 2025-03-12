@@ -5,7 +5,7 @@ layout: default
   <div class="{% if page.screen-height == 'full' %} min-h-screen {% elsif page.screen-height == '80%' %} min-h-[80%] {% elsif page.screen-height == '60%' %} min-h-[60%] {% endif %}  grid md:grid-cols-2">
     <!-- md:h-full on the div negates the h-72, h-full on the image is still needed because of the position absolute -->
     <div class="grow relative h-72 md:h-full"> 
-      <img class="absolute w-full h-full object-cover object-center" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}" src="{{page.featured_image}}" alt="{{page.alt}}">
+      <img class="absolute w-full h-full object-cover object-center" style="object-position: {{page.image-horizontal-focal-point}} {{page.image-vertical-focal-point}}" src="{{page.image}}" alt="{{page.alt}}">
     </div>
     <!-- Text -->
     <div class="p-8 sm:p-16 col-span-1 pr-12 {% if page.text-placement == 'top' %} self-start {% elsif page.text-placement == 'center' %} self-center {% elsif page.text-placement == 'bottom' %} self-end {% endif %} 

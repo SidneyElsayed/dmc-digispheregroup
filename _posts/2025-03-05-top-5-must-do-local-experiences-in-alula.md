@@ -1,11 +1,7 @@
 ---
 layout: listicle
 title: Top 5 Must-Do Local Experiences in AlUla | Adventure AlUla
-article-title: Top 5 Must-Do Local Experiences in AlUla
-categories:
-  - culture
-description: Dig deeper into the culture of Saudi with this top five list. Check them off on your own, or find a group to join – either way we think this is a perfect entry into what the Kingdom is all about.
-featured_image: >-
+image: >-
   https://images.unsplash.com/photo-1621526127806-6080a5a41129?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGR1bmUlMjBidWdnaWVzfGVufDB8fDB8fHww
 alt:
 screen-height: 60%
