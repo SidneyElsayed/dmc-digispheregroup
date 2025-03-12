@@ -12,12 +12,12 @@
 
   {% endif %}
 
-  <div class="gap-6 p-16 pt-6 {% if items.size > 3 %} flex overflow-x-auto w-full {% else %} grid md:grid-cols-3 {% endif %}">
+  <div class="px-8 sm:px-16 gap-8 pt-12 pb-4 flex overflow-x-auto w-full no-scrollbar">
 
     {% for item in block.card-loop %}
 
       <!-- Card Loop -->
-      <div class="{% if items.size > 3 %} basis-[30%] shrink-0 {% endif %} card-shadow bg-base-color">
+      <div class="basis-[90%] sm:basis-[80%] md:basis-[30%] shrink-0 card-shadow bg-base-color">
         <a href="{{item.url}}">
           <div class="">
             <img class="aspect-square object-cover w-full" src="{{item.image}}" alt="{{item.alt}}">
