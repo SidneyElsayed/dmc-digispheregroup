@@ -3,12 +3,12 @@
   
   <!-- Actual content starts here, so that the above has the max width -->
 
-  <div class="p-8 sm:px-16 py-16">
+  <div class="p-8 sm:px-16 py-16 bg-featured-yellow">
     <h3 class="featured-text text-5xl text-featured-blue relative w-[70vw] pb-6">{{block.heading}}</h3>
 
     {% if block.button-link and block.button-text %}
     <!-- Button only shows up if both fields are filled -->
-    <a href="{{block.button-link}}" class="button text-featured-blue">{{block.button-text}}</a>
+    <a href="{{block.button-link}}" class="button bg-base-color text-featured-blue justify-end">{{block.button-text}}</a>
 
     {% endif %}
 
