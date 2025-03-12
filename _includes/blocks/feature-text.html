@@ -1,0 +1,62 @@
+<section id="section-{{forloop.index}}">
+  <div class="max-width mx-auto">
+   <!-- Actual content starts here, so that the above has the max width -->
+
+   {% if block.section-heading %}
+
+   <h2 class="px-8 sm:px-16 pt-16 featured-text font-extrabold uppercase tracking-wide text-4xl sm:text-6xl {% if block.text-alignment == 'left' %} text-left {% elsif block.text-alignment == 'center' %} text-center {% elsif block.text-alignment == 'right' %} text-right {% endif %}">{{block.section-heading}}</h2>
+ 
+   {% endif %}
+ 
+   <!-- Image -->
+   <div class="grid grid-cols-2">
+     <div class="col-span-2 md:col-span-1 m-12 md:m-20 relative pb-[66%]"> 
+       <img class="absolute inset-0 h-full w-full z-10 object-cover object-center" style="object-position: {{block.image-horizontal-focal-point}} {{block.image-vertical-focal-point}}" src="{{block.image}}" alt="{{.alt | default: block.subtitle}}">
+         <!-- Caption -->
+         <span class="z-10 absolute left-3 top-[103%] w-[calc(100%_-_145px)] lg:w-[calc(100%_-_80px)] font-thin text-xs featured-text tracking-wide ">{{block.subtitle}}</span>
+         <!-- Color block -->
+         <span class="z-0 absolute -right-[30px] -bottom-8 h-full w-[150px] bg-featured-blue"></span>
+     </div>
+ 
+     <!-- Text Block -->
+     <div class="p-8 sm:p-16 col-span-2 md:col-span-1 {% if block.text-placement == 'top' %} self-start {% elsif block.text-placement == 'center' %} self-center {% elsif block.text-placement == 'bottom' %} self-end {% endif %} 
+     
+     {% if block.image-placement == 'right' %} md:order-first {% endif %}">
+       <!-- Text Block Heading -->
+       {% if block.text-block-heading %}
+       <div>
+         <h2 class="pb-8 featured-text text-5xl font-extrabold uppercase tracking-wide">{{block.text-block-heading}}</h2>
+       </div>
+       {% endif %}
+ 
+       <!-- Description -->
+       {% if block.description-1 %}
+         <p class="pb-4">{{block.description-1}}</p>
+       {% endif %}
+ 
+       {% if block.description-2 %}
+         <p class="pb-4">{{block.description-2}}</p>
+       {% endif %}
+ 
+       {% if block.description-3 %}
+         <p class="pb-4">{{block.description-3}}</p>
+       {% endif %}
+ 
+       <!-- Buttons -->
+       <div class="pt-4">
+         {% if block.button-1-link and block.button-1-text %}
+         <a href="{{block.button-1-link}}" class="p-4 relative button button-1 {{block.button-1-bg}} text-featured-red">{{block.button-1-text}}</a>
+         {% endif %}
+ 
+         {% if block.button-2-link and block.button-2-text %}
+         <a href="{{block.button-2-link}}" class="p-4 mx-4 relative button button-2 {{block.button-2-bg}} text-featured-red">{{block.button-2-text}}</a>
+         {% endif %}
+       </div>
+ 
+     </div>
+   </div>
+ 
+
+     <!-- Don't delete the below; these are for the starting id and class above -->
+ </div>
+</section>

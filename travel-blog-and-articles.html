@@ -1,4 +1,43 @@
 ---
 layout: default
 title: Travel Blog & Articles | Adventure AlUla
+blocks:
+  - id: funky-text-banner
+    heading: Travel Blog & Articles
+    image: https://images.unsplash.com/photo-1595514346946-e268c9dc5316?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+    alt: hot air balloons soaring over the unique rock formations of Hegra in AlUla, Saudi Arabia
+    image-horizontal-focal-point: center
+    image-vertical-focal-point: center
+    button-text:
+    button-link:
 ---
+<section class="px-8 sm:px-16 py-28">
+
+  <div class="grid grid-cols-2">
+
+      {% for post in site.posts limit:100 %}
+
+      <a class="col-span-2 lg:col-span-1 post-item p-8 hover:text-featured-green" href="{{ post.url }}">
+          <div class="grid grid-cols-12">
+              <div class="col-span-3">
+                  <div class="bg-base-color aspect-square object-cover object-center" style="background-image:url( '{{ post.featured_image }}' ); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+  
+              </div>
+              <div class="col-span-9 pl-4">
+
+                  {% for item in post.categories %}
+                      <span class="featured-text uppercase text-sm mr-2 opacity-70"> {{item}} </span>
+                  {% endfor %}
+          
+                  <h4 class="featured-text text-2xl"> {{ post.article-title }} </h4>
+                  <p class="text-sm hidden sm:block"> {{ post.description }} </p>
+          
+              </div>
+          </div>
+      </a>
+
+      {% endfor %}
+
+  </div>
+
+</section>
