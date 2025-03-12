@@ -5,7 +5,39 @@ layout: default
 <section class="flex relative items-center min-h-[60vh]">
   <img class="absolute object-cover h-full w-full inset-y-0 right-0" src="{{page.image}}" alt="{{page.alt}}" style="object-position: {{page.image-horizontal-focal-point}}  {{page.image-vertical-focal-point}}">
   <h1 class="relative w-full {% if page.banner-text-size-override %} text-[max(10vw,_2rem)] {% else %} text-[max(14.75vw,_5rem)] {% endif %} featured-text font-extrabold text-center text-base-color fun-text-shadow-blue">{{page.heading}}</h1>
-</section>
+ </section>
+ 
+ {% if page.feature-shoutout == true %}
+ <div class="grid grid-cols-3 gap-12 bg-featured-blue text-base-color">
+  <!-- Large Text -->
+  <div class="col-span-3 md:col-span-1 pt-8 pb-0 md:py-16 md:pl-8 md:pr-0">
+    <h3 class="pb-3 featured-text text-5xl font-extrabold tracking-wide">{{page.feature-heading}}</h3>
+    <p class="leading-relaxed">{{page.feature-subheading}}</p>
+    <!-- Buttons -->
+    <div class="pt-3">
+      {% if page.button-1-link and page.button-1-text %}
+      <a href="{{page.button-1-link}}" class="mr-3 relative button text-featured-red bg-base-color {{page.button-1-bg}}">{{page.button-1-text}}</a>
+      {% endif %}
+
+
+      {% if page.button-2-link and page.button-2-text %}
+      <a href="{{page.button-2-link}}" class="my-4 relative button text-featured-green bg-base-color {{page.button-2-bg}}">{{page.button-2-text}}</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Image -->
+  <div class="col-span-3 md:col-span-2 content-center">
+    <img class="hidden md:block object-cover w-full inset-y-0 right-0" src="{{page.feature-image}}" alt="{{page.alt}}">
+    <img class="md:hidden object-cover w-full inset-y-0 right-0" src="{{page.feature-image-mob}}" alt="{{page.alt}}">
+  </div>
+      
+{% endif %}
+ 
+ 
+    
+  </div>
+ </section>
 
 <!-- Highlights Section -->
 <section class="p-8 pr-0 sm:pr-0 sm:p-16">
@@ -81,11 +113,11 @@ layout: default
 </section>
 
 <!-- More Info Links Banner -->
-<div class="p-8 sm:px-16 py-10 flex flex-col relative left-[30vw] w-[70vw]">
+<div class="p-8 sm:px-16 py-10 flex flex-col relative md:left-[30vw] md:w-[70vw]">
   <h3 class="flex featured-text text-5xl text-featured-blue relative pb-6">Still have questions?</h3>
 
   {% for item in page.link-loop %}
-    <p class=""><i class="fa-solid fa-caret-right text-lg"></i> {{item.text}} <a href="{{item.link}}" class=" text-featured-blue underline font-semibold"> {{item.link-text}} </a></p>
+    <p class=""><i class="fa-solid fa-caret-right text-lg pr-2"></i> {{item.text}} <a href="{{item.link}}" class=" text-featured-red underline font-semibold"> {{item.link-text}} </a></p>
     
   {% endfor %}
 

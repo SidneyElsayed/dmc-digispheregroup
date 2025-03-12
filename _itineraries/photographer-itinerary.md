@@ -7,9 +7,21 @@ heading: Photographer's Itinerary
 banner-text-size-override: true
 image: https://images.unsplash.com/photo-1544130693-55e9b03af6da?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHBob3RvZ3JhcGhlciUyMGluJTIwdGhlJTIwZGVzZXJ0fGVufDB8fDB8fHww
 alt:
-image-placement: right
+image-placement: left
 image-horizontal-focal-point: right
 image-vertical-focal-point: center
+
+feature-shoutout: true
+feature-heading: From the Pod to the Page 
+feature-subheading: This itinerary is inspired by our podcast conversation with Shiv Gohil, AlUla's official destination photographer
+feature-image: 
+button-1-link: /index
+button-1-text: Watch the pod
+button-2-link: index
+button-2-text: Read his story
+feature-image: /images/cc-pod-page-header.jpg
+feature-image-mob: /images/cc-pod-page-header-mob.jpg
+
 highlights-loop: 
   - image: https://plus.unsplash.com/premium_photo-1697729426541-3aecea346bc9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHNhdWRpfGVufDB8fDB8fHww
     alt:
@@ -119,13 +131,13 @@ timeline-loop:
       name: Stargazing at Gharameel
       description: Otherworldly rock formations plus dark skies make for unreal photos
 link-loop:
-  - text: Not sure what to bring? See our packing list
-    link-text: Link here
+  - text: Looking for other great food spots? 
+    link-text: Check out our article
+    link: /posts/top-5-local-food-spots-in-alula.html
+  - text: Want to get those instagram-worthy shots?
+    link-text: Our top 5 picks are here
+    link: /posts/top-5-instagram-worthy-experiences-in-alula
+  - text: Not sure what to bring?
+    link-text: See our packing list
     link: 
-  - text: Still have questions? Something
-    link-text: Link here
-    link:
-  - text: Want to get in touch? Send us a message
-    link-text: Link here
-    link:
 ---
