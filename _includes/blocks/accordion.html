@@ -11,11 +11,11 @@
     </h2>
 
     {% endif %}
-
+    
     <div class="p-8 sm:px-16">
       <ul class="border-featured-blue border-2">
-        {% for item in block.accordion-loop %} 
-        {% if item.question and item.answer %}
+        {% for item in site.data.faqs.questions %} 
+        {% if item.pages contains block.faq-filter %}
         <li class="relative border-b border-featured-blue" x-data="{selected:null}">
           <button
             type="button"
@@ -34,11 +34,11 @@
             x-ref="container{{forloop.index}}"
             x-bind:style="selected == {{forloop.index}} ? 'max-height: ' + $refs.container{{forloop.index}}.scrollHeight + 'px' : ''">
             <div class="pb-6 px-8">
-              <p>{{item.answer}}</p>
+              <p>{{item.answer_html}}</p>
             </div>
           </div>
         </li>
-        {% endif %} 
+        {% endif %}
         {% endfor %}
   
       </ul>
