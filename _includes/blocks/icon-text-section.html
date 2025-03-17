@@ -1,17 +1,29 @@
 <section id="section-{{forloop.index}}">
   <div class="max-width mx-auto">
    <!-- Actual content starts here, so that the above has the max width -->
- 
- 
-  <section class="px-8 py-32 sm:px-16 md:flex md:flex-row gap-16 text-center bg-featured-green text-base-color">
+
+  <div class="{{block.bg-color}} py-32 text-base-color text-center">
+    {% if block.section-heading %}
+
+      <h2 class="pb-16 featured-text text-5xl sm:text-6xl">{{block.section-heading}}</h2>
+   
+    {% endif %}
+  <div class="px-8 sm:px-16 md:flex md:flex-row gap-16 text-center">
+
     {% for item in block.info-loop %}
-    <div class="py-14 md:py-0 md:min-h-80">
+    <div class="py-14 md:py-0 md:min-h-80 ">
         <i class="pb-4 fa-solid {{item.icon}} text-5xl justify-center w-full"></i>
         <h4 class="py-2 uppercase featured-text font-bold text-2xl">{{item.heading}}</h4>
         <p class="">{{item.text}}</p>
+        {% if item.button-link and item.button-text %}
+        <div class=" pt-6">
+          <a href="{{item.button-link}}" class="p-4 relative button bg-base-color text-featured-blue">{{item.button-text}}</a>
+        </div>
+        {% endif %}
     </div>
     {% endfor %}
-  </section>
+  </div>
+  </div>
  
  
   <!-- Don't delete the below; these are for the starting id and class above -->
