@@ -5,7 +5,7 @@ questions:
       However, there are clear winners for favorite months to visit.
       <strong>October/November</strong> and <strong>February/March</strong> see
       the mildest weather, meaning not too warm in the daytime and not too cold
-      at night.</p>
+      at night.</p><ul><li><p>a list</p></li><li><p>another list</p></li></ul>
     pages:
       - index
   - question: Visa & travel requirements
