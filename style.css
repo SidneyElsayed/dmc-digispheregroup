@@ -19,7 +19,7 @@ p a {
 }
 
 p a:hover {
-    border-bottom: 2px solid {{text-color}};
+    border-bottom: 2px solid;
 }
 
 /* Crazy Grid Image/Text */
