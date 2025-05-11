@@ -25,10 +25,14 @@
           <div class="p-2">
             <h3 class="featured-text p-2 pb-0 text-2xl">{{item.heading}}</h3>
             <p class="p-2">
-              {% if item.ticket-needed == true %} <i class="fa-solid fa-ticket"></i> ticket needed |{% endif %} 
-              {% if item.pets-allowed == true %} <i class="fa-solid fa-paw"></i> allowed |{% endif %} 
-              {% if item.accessible == true %} <i class="fa-brands fa-accessible-icon"></i> accessible |{% endif %}
-              {% if item.family-friendly == true %} <i class="fa-solid fa-person-breastfeeding"></i> family-friendly{% endif %} </p>
+              {% for icon in item.icons %}
+              {% if icon.ticket-needed == true %} <span class="inline-block"> <i class="fa-solid fa-ticket"></i> ticket needed {% endif %} 
+              {% if icon.pets-allowed == true %} <i class="fa-solid fa-paw"></i> allowed {% endif %} 
+              {% if icon.accessible == true %} <i class="fa-brands fa-accessible-icon"></i> accessible {% endif %}
+              {% if icon.family-friendly == true %} <span class="inline-block"> <i class="fa-solid fa-person-breastfeeding"></i> family friendly</span>{% endif %} 
+            {% unless forloop.last  %} | {% endunless %}
+            {% endfor %}
+            </p>
 
           </div>
         </a>

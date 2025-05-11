@@ -178,6 +178,7 @@ body {
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border: 2px solid var(--featured-color-red);
+    transition: all .3s;
 }
 
 .button.text-featured-yellow {
@@ -285,6 +286,35 @@ body {
     background-color: var(--base-color);
     color: var(--featured-color-blue);
     border: 3px 3px;
+}
+
+/* Buttons on colored backgrounds */
+[class*='bg-featured'] .button.text-featured-blue:hover {
+    color: var(--base-color);
+    border-color: var(--base-color);
+    box-shadow:
+        var(--base-color) 0px 0px;
+}
+
+[class*='bg-featured'] .button.text-featured-red:hover {
+    color: var(--base-color);
+    border-color: var(--base-color);
+    box-shadow:
+        var(--base-color) 0px 0px;
+}
+
+[class*='bg-featured'] .button.text-featured-green:hover {
+    color: var(--base-color);
+    border-color: var(--base-color);
+    box-shadow:
+        var(--base-color) 0px 0px;
+}
+
+[class*='bg-featured'] .button.text-featured-yellow:hover {
+    color: var(--base-color);
+    border-color: var(--base-color);
+    box-shadow:
+        var(--base-color) 0px 0px;
 }
 
 /* No scroll bar */
