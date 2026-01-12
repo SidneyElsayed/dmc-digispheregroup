@@ -49,7 +49,7 @@
          {% endif %}
  
          {% if block.button-2-link and block.button-2-text %}
-         <a href="{{block.button-2-link}}" class="p-4 mx-4 relative button button-2 {{block.button-2-bg}} text-featured-red">{{block.button-2-text}}</a>
+         <a href="{{block.button-2-link}}" class="p-4 mx-4 relative button button-2 {{block.button-2-bg}} text-featured-red" {% if block.button-2-link contains 'pdf' %} target="_blank" {% endif %}>{{block.button-2-text}}</a>
          {% endif %}
 
          {% if block.pdf-button and block.pdf-button-text %}
