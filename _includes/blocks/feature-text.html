@@ -51,6 +51,10 @@
          {% if block.button-2-link and block.button-2-text %}
          <a href="{{block.button-2-link}}" class="p-4 mx-4 relative button button-2 {{block.button-2-bg}} text-featured-red">{{block.button-2-text}}</a>
          {% endif %}
+
+         {% if block.pdf-button and block.pdf-button-text %}
+         <a href="{{pdf-button}}" download class="p-4 mx-4 relative button button-2 {{block.button-2-bg}} text-featured-red" target="_blank">{{block.pdf-button-text}}</a>
+         {% endif %}
        </div>
  
      </div>
